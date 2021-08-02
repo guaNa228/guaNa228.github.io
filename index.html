@@ -1,278 +1,670 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML5>
 <html lang="en">
 <head>
-  <title>Global!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="media/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freebie</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<div class="preloader" id="page-preloader">
-	<div class="loader"></div>
-</div>
-<div class="device-notification">
-  <a class="device-notification--logo" href="#">
-    <img src="assets/img/logo.png" alt="Global">
-    <p>Global</p>
-  </a>
-  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
-</div>
-
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="#0">
-            <img src="assets/img/logo.png" alt="Global">
-            <p>Global</p>
-          </a>
-          <button class="header--cta cta">Hire Us</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
-        </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Works</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Hire us</span></li>
-          </ul>
-        </nav>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="intro">
-              <div class="intro--banner">
-                <h1>Your next<br>interactive<br>experience</h1>
-                <button class="cta">Hire Us
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                  <span class="btn-background"></span>
-                </button>
-                <img src="assets/img/introduction-visual.png" alt="Welcome">
-              </div>
-              <div class="intro--options">
-                <a href="#0">
-                  <h3>Metiew &amp; Smith</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                </a>
-                <a href="#0">
-                  <h3>Fantasy interactive</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                </a>
-                <a href="#0">
-                  <h3>Paul &amp; shark</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>Selected work</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-victory.jpg" alt="Victory">
-                      </div>
-                      <p class="slider--item-title">Victory</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Metiew &amp; Smith</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Alex Nowak</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
-                </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="about">
-              <div class="about--banner">
-                <h2>We<br>believe in<br>passionate<br>people</h2>
-                <a href="#0">Career
-                  <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>
-                  </span>
-                </a>
-                <img src="assets/img/about-visual.png" alt="About Us">
-              </div>
-              <div class="about--options">
-                <a href="#0">
-                  <h3>Winners</h3>
-                </a>
-                <a href="#0">
-                  <h3>Philosophy</h3>
-                </a>
-                <a href="#0">
-                  <h3>History</h3>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <div class="modal--information">
-                    <p>Pawia 5, 31-154 Kraków, Poland</p>
-                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                    <a href="tel:+2281488322">+48 12 628 75 60</a>
-                  </div>
-                  <ul class="modal--options">
-                    <li><a href="#0">Bēhance</a></li>
-                    <li><a href="#0">dribbble</a></li>
-                    <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="hire">
-              <h2>You want us to do</h2>
-              <form class="work-request">
-                <div class="work-request--options">
-                  <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
-                    <label for="opt-1">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      App Design
-                    </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
-                    <label for="opt-2">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Graphic Design
-                    </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
-                    <label for="opt-3">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Motion Design
-                    </label>
-                  </span>
-                  <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
-                    <label for="opt-4">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      UX Design
-                    </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
-                    <label for="opt-5">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Webdesign
-                    </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
-                    <label for="opt-6">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Marketing
-                    </label>
-                  </span>
-                </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Send Request">
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <nav class="mobile">
+        <a href="#trusted" class="nav_link">Home</a>
+        <a href="#ultimate_features" class="nav_link">Key features</a>
+        <a href="#prices" class="nav_link">Pricing</a>
+        <a href="#clients_and_faq" class="nav_link">Testimonial</a>
+        <a href="#faq" class="nav_link">FAQ</a>
+        <a href="#download" class="nav_link">Try</a>
+    </nav>
+    <svg class="icon-cancel" >
+        <use xlink:href="symbol-defs.svg#icon-cancel"></use>
+    </svg>
+    <div class="animBlockWrapper">
+        <div class="animBlock"></div>
     </div>
-  </div>
-  <ul class="outer-nav">
-    <li class="is-active">Home</li>
-    <li>Works</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Hire us</li>
-  </ul>
-</div>
+    <header>
+        <div class="wrapper">
+            <div class="mobile_menu">
+                
+            </div>
+            <div id="topPanel">
+                <span class="logo"><span class="yellow">App</span>Lab</span>
+                <nav>
+                    <a href="#trusted" class="nav_link">Home</a>
+                    <a href="#ultimate_features" class="nav_link">Key features</a>
+                    <a href="#prices" class="nav_link">Pricing</a>
+                    <a href="#clients_and_faq" class="nav_link">Testimonial</a>
+                    <a href="#faq" class="nav_link">FAQ</a>
+                    <a href="#download" class="try_for_free_btn">Try for free</a>
+                </nav>
+                <svg class="icon-menu" >
+                    <use xlink:href="symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </div>
+            <div id="main">
+                <div id="content">
+                    <div class="editors_choice">
+                        <div>
+                            <svg class="icon-ok">
+                                <use xlink:href="symbol-defs.svg#icon-ok"></use>
+                            </svg>
+                        </div>
+                        <p>#1 Editiors Choice App of 2020</p>
+                    </div>
+                    <h1>Best app for your modern lifestyle</h1>
+                    <p>Increase productivity with a simple to-do app. app for managing your personal budgets.</p>
+                    <div class="btns">
+                        <a href="#download" class="try_for_free_btn">Try for free</a>
+                        <span><a target="_blank" href="files/demo.gif">Watch demo video</a></span>
+                    </div>
+                </div>
+                <div id="phone_image">
+                    <img src="files/header/Group 1.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bg">
+            <img src="files/header/Layer 5.svg" alt="">
+            <img src="files/header/Layer 5.svg" alt="">
+            <img src="files/header/Layer 5.svg" alt="">
+            <img src="files/header/Layer 5.svg" alt="">
+            <img src="files/header/Layer 5.svg" alt="">
+            <img src="files/header/Layer 5.svg" alt="">
+        </div>
+        <div class="bg_extended">
+            <img src="files/header/bg.svg" alt="">
+        </div>
+    </header>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
-<script src="media/js/preloader.js"></script>
+    <main>
+        <article name="home" id="features_and_companies">
+            <section id="trusted">
+                <div class="wrapper">
+                    <p>Trusted by companies like</p>
+                    <div class="companies_wrapper">
+                        <div><img src="files/trusted_by_companies/1.svg" alt=""></div>
+                        <div><img src="files/trusted_by_companies/2.svg" alt=""></div>
+                        <div><img src="files/trusted_by_companies/3.svg" alt=""></div>
+                        <div><img src="files/trusted_by_companies/4.svg" alt=""></div>
+                        <div><img src="files/trusted_by_companies/5.svg" alt=""></div>
+                    </div>
+                </div>
+            </section>
+            <section id="features">
+                <div class="wrapper">
+                    <div class="image">
+                        <img src="files/features_icons/features_phone.svg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Awesome apps features</h2>
+                        <h5>Increase productivity with a simple to-do app. app for managing your personal budgets.</h5>
+                        <div class="features_container">
+                            <div class="feature">
+                                <div class="logo">
+                                    <svg class="icon-speed">
+                                        <use xlink:href="symbol-defs.svg#icon-speed"></use>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <h6>Fast Performance</h6>
+                                    <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                                </div>   
+                            </div>
+                            <div class="feature">
+                                <div class="logo">
+                                    <svg class="icon-prototyping">
+                                        <use xlink:href="symbol-defs.svg#icon-prototyping"></use>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <h6>Prototyping</h6>
+                                    <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="logo">
+                                    <svg class="icon-ui">
+                                        <use xlink:href="symbol-defs.svg#icon-ui"></use>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <h6>Vector Editing</h6>
+                                    <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="jackpots">
+                <div class="wrapper">
+                    <div class="head">
+                        <h1>Smart jackpots that you may love this anytime & anywhere</h1>
+                        <span class="sep"></span>
+                        <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+                    </div>
+                    <div class="jackpot_items">
+                        <div class="jackpot">
+                            <div class="logo">
+                                <svg class="icon-payouts">
+                                    <use xlink:href="symbol-defs.svg#icon-payouts"></use>
+                                </svg>
+                            </div>
+                            <h4>Automatic Payouts</h4>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="jackpot">
+                            <div class="logo">
+                                <svg class="icon-network">
+                                    <use xlink:href="symbol-defs.svg#icon-network"></use>
+                                </svg>
+                            </div>
+                            <h4>Network Effect</h4>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="jackpot">
+                            <div class="logo">
+                                <svg class="icon-reward">
+                                    <use xlink:href="symbol-defs.svg#icon-reward"></use>
+                                </svg>
+                            </div>
+                            <h4>Bigger Rewards Method</h4>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section id="designed_and_built">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="files/designed&built/main.svg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Designed & built by the latest code integration</h2>
+                        <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+                        <a href="#download" class="try_for_free_btn">Start for free</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    
+        <article id="reasons_and_prices">
+            <section name="features" id="why_choose_app">
+                <div class="wrapper">
+                    <h1>Why you should choose our app</h1>
+                    <h5>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</h5>
+                    <div class="reasonsGrid">
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-web-design">
+                                    <use xlink:href="symbol-defs.svg#icon-web-design"></use>
+                                </svg>
+                            </div>
+                            <h3>App Development</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-trophy">
+                                    <use xlink:href="symbol-defs.svg#icon-trophy"></use>
+                                </svg>
+                            </div>
+                            <h3>10 Times Award</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-computer">
+                                    <use xlink:href="symbol-defs.svg#icon-computer"></use>
+                                </svg>
+                            </div>
+                            <h3>Cloud Storage</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-customer-support">
+                                    <use xlink:href="symbol-defs.svg#icon-customer-support"></use>
+                                </svg>
+                            </div>
+                            <h3>Customization</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-ui">
+                                    <use xlink:href="symbol-defs.svg#icon-ui"></use>
+                                </svg>
+                            </div>
+                            <h3>UX Planning</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                        <div class="reason">
+                            <div class="logo_wrapper">
+                                <svg class="icon-customer-service">
+                                    <use xlink:href="symbol-defs.svg#icon-customer-service"></use>
+                                </svg>
+                            </div>
+                            <h3>Customer Support</h3>
+                            <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ultimate_features">
+                <div class="wrapper">
+                    <div class="info">
+                        <h1>Ultimate features that we built</h1>
+                        <p>The rise of mobile devices transforms the way we consume information entirely.</p>
+                        <div class="features_grid">
+                            <div class="feature_item">
+                                <div class="logo">
+                                    <svg class="icon-web-design">
+                                        <use xlink:href="symbol-defs.svg#icon-web-design"></use>
+                                    </svg>
+                                </div>
+                                <h6>App Development</h6>
+                                <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                            </div>
+                            <div class="feature_item">
+                                <div class="logo">
+                                    <svg class="icon-ui">
+                                        <use xlink:href="symbol-defs.svg#icon-ui"></use>
+                                    </svg>
+                                </div>
+                                <h6>UX Planing</h6>
+                                <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                            </div>
+                            <div class="feature_item">
+                                <div class="logo">
+                                    <svg class="icon-computer">
+                                        <use xlink:href="symbol-defs.svg#icon-computer"></use>
+                                    </svg>
+                                </div>
+                                <h6>Cloud Storage</h6>
+                                <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                            </div>
+                            <div class="feature_item">
+                                <div class="logo">
+                                    <svg class="icon-customer-service">
+                                        <use xlink:href="symbol-defs.svg#icon-customer-service"></use>
+                                    </svg>
+                                </div>
+                                <h6>Customer support</h6>
+                                <p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
+                            </div>
+                        </div>
+                        <a href="#download" class="try_for_free_btn">See all</a>
+                    </div>
+                    <div class="img">
+                        <img src="files/ultimate_features/Group 197.svg" alt="" class="phone1">
+                        <img src="files/ultimate_features/Phone copy 4.png" alt="" class="phone2">
+                    </div>
+                </div>
+            </section>
+            <section name="prices" id="prices">
+                <div class="wrapper">
+                    <h1>Get awesome features, without extra charges</h1>
+                    <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+                    <div class="mode_swap">
+                        <div class="container">
+                            <span class="active">Monthly</span>
+                            <span>Annually</span>
+                        </div>
+                        <span class="blue_back monthly"></span>
+                    </div>
+                    <span class="blue_back"></span>
+                    <div class="prices">
+                        <div class="price_card monthly">
+                            <div class="main">
+                                <h1><em>$0</em>/month</h1>
+                                <h5>Business Class</h5>
+                                <p>For small teams or office</p>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li>Drag & Drop Builder</li>
+                                    <li>1,000's of Templates</li>
+                                    <li>Blog Support Tools</li>
+                                    <li>eCommerce Store</li>
+                                </ul>
+                                <a href="#download" class="try_for_free_btn">Start for free</a>
+                            </div>
+                        </div>
+                        <div class="price_card monthly last">
+                            <div class="main">
+                                <h1><em>$99</em>/month</h1>
+                                <h5>Pro Master</h5>
+                                <p>For Best opportunities</p>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li>Drag & Drop Builder</li>
+                                    <li>1,000's of Templates</li>
+                                    <li>Blog Support Tools</li>
+                                    <li>eCommerce Store</li>
+                                </ul>
+                                <a href="#download" class="try_for_free_btn">Start for free</a>
+                                <span><a href="#download">Or Start 14 days trail</a></span>
+                            </div>
+                        </div>
+                        <div class="price_card annually last">
+                            <div class="main">
+                                <h1><em>$500</em></h1>
+                                <h5>Premium Class</h5>
+                                <p>For everyone</p>
+                            </div>
+                            <div class="info">
+                                <ul>
+                                    <li>Drag & Drop Builder</li>
+                                    <li>1,000's of Templates</li>
+                                    <li>Blog Support Tools</li>
+                                    <li>eCommerce Store</li>
+                                    <li>Blog Support Tools</li>
+                                </ul>
+                                <a href="#download" class="try_for_free_btn">Start for free</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+        
+        <article id="clients_and_faq">
+            <section id="clients">
+                <div class="wrapper">
+                    <div class="map">
+                        <img src="files/clients/bg.svg" alt="" class="main">
+                        <img src="files/clients/1.jpg" alt="">
+                        <img src="files/clients/2.jpg" alt="">
+                        <img src="files/clients/3.jpg" alt="">
+                        <img src="files/clients/4.jpg" alt="">
+                        <img src="files/clients/5.jpg" alt="">
+                        <img src="files/clients/6.jpg" alt="">
+                        <img src="files/clients/7.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>Meet Client Satisfaction by using product</h2>
+                        <p>The rise of mobile devices transforms the way we consume elevant channels such as Facebook.</p>
+                        <div id="main_testimonial" class="slider">
+                            <div class="slider_item">
+                                <div class="rating">
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                </div>
+                                <p class="theme">User friendly & Customizable</p>
+                                <p class="review">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                <div class="footer">
+                                    <div class="author">
+                                        <img src="files/clients/reviews/adult-beard-boy-220453 копия.JPG" alt="">
+                                        <div class="name_post">
+                                            <h6>Zoltan Nemeth</h6>
+                                            <p>CEO of Pixler Lab</p>
+                                        </div>
+                                    </div>
+                                    <div class="controls">
+                                        <div class="backward deactivated">
+                                            <svg class="icon-left-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-left-arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="sep"></span>
+                                        <div class="forward">
+                                            <svg class="icon-right-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-right-arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider_item">
+                                <div class="rating">
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                </div>
+                                <p class="theme">User friendly & Customizable</p>
+                                <p class="review">Bring to the table win-win survival strategies to ensure proactive domination. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                <div class="footer">
+                                    <div class="author">
+                                        <img src="files/clients/reviews/adult-beard-boy-220453 копия.JPG" alt="">
+                                        <div class="name_post">
+                                            <h6>Zoltan Nemeth</h6>
+                                            <p>CEO of Pixler Lab</p>
+                                        </div>
+                                    </div>
+                                    <div class="controls">
+                                        <div class="backward">
+                                            <svg class="icon-left-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-left-arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="sep"></span>
+                                        <div class="forward active">
+                                            <svg class="icon-right-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-right-arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider_item">
+                                <div class="rating">
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                </div>
+                                <p class="theme">User friendly & Customizable</p>
+                                <p class="review">Bring to able win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                <div class="footer">
+                                    <div class="author">
+                                        <img src="files/clients/reviews/adult-beard-boy-220453 копия.JPG" alt="">
+                                        <div class="name_post">
+                                            <h6>Zoltan Nemeth</h6>
+                                            <p>CEO of Pixler Lab</p>
+                                        </div>
+                                    </div>
+                                    <div class="controls">
+                                        <div class="backward">
+                                            <svg class="icon-left-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-left-arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="sep"></span>
+                                        <div class="forward active">
+                                            <svg class="icon-right-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-right-arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider_item">
+                                <div class="rating">
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                    <svg class="icon-star done">
+                                        <use xlink:href="symbol-defs.svg#icon-star"></use>
+                                    </svg>
+                                </div>
+                                <p class="theme">User friendly & Customizable</p>
+                                <p class="review">Bring to the table win-win survival strategies to ensu strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                                <div class="footer">
+                                    <div class="author">
+                                        <img src="files/clients/reviews/adult-beard-boy-220453 копия.JPG" alt="">
+                                        <div class="name_post">
+                                            <h6>Zoltan Nemeth</h6>
+                                            <p>CEO of Pixler Lab</p>
+                                        </div>
+                                    </div>
+                                    <div class="controls">
+                                        <div class="backward">
+                                            <svg class="icon-left-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-left-arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="sep"></span>
+                                        <div class="forward deactivated">
+                                            <svg class="icon-right-arrow">
+                                                <use xlink:href="symbol-defs.svg#icon-right-arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section name="faq" id="faq">
+                <div class="wrapper">
+                    <h1>Frequently asked question</h1>
+                    <p class="main">The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+                    <div id="main_faq" class="faq_accordion">
+                        <div class="accordion_item opened">
+                            <h5>How to contact with riders emergency?</h5>
+                            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                            <svg class="icon-plus">
+                                <use xlink:href="symbol-defs.svg#icon-plus"></use>
+                            </svg>
+                        </div>
+                        <div class="accordion_item">
+                            <h5>App installation failed, how to update system information?</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam minus alias et voluptatem vero libero beatae accusantium nisi? Aperiam quam facere hic exercitationem unde, cum incidunt autem provident expedita.
+                            At non repudiandae commodi quis id porro similique perferendis quo, excepturi ipsa sint, tempore molestias reiciendis expedita temporibus nesciunt nulla dolore odio nam inventore? Saepe quam hic quo qui amet!
+                            Doloribus voluptatum quo accusamus repudiandae est minima earum aperiam ipsum incidunt nihil? Officiis odit voluptates quis fugiat cum excepturi optio suscipit, libero pariatur ipsum nobis assumenda? Assumenda vero odit ab.</p>
+                            <svg class="icon-plus">
+                                <use xlink:href="symbol-defs.svg#icon-plus"></use>
+                            </svg>
+                        </div>
+                        <div class="accordion_item">
+                            <h5>Website reponse taking time, how to improve?</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugit ea, officia, officiis nihil pariatur dignissimos praesentium maxime ab quae sequi quam voluptates? Tempora eos, magni numquam assumenda illum veritatis?
+                            Ratione repudiandae ab, quae iusto quas quam labore esse impedit necessitatibus vero totam numquam provident doloribus quaerat a harum, reprehenderit et voluptatum cum quisquam veritatis. Pariatur alias rem possimus omnis?</p>
+                            <svg class="icon-plus">
+                                <use xlink:href="symbol-defs.svg#icon-plus"></use>
+                            </svg>
+                        </div>
+                        <div class="accordion_item">
+                            <h5>New update fixed all bug and issues</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum magni fugiat eveniet earum minus tempora expedita veritatis nesciunt! Adipisci eligendi explicabo fugiat, aut fuga rerum vitae quo dolores praesentium accusamus.</p>
+                            <svg class="icon-plus">
+                                <use xlink:href="symbol-defs.svg#icon-plus"></use>
+                            </svg>
+                        </div>
+                        <div class="accordion_item">
+                            <h5>How to contact with riders emergency?</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio accusamus explicabo facilis dolore, doloremque repellat ducimus similique molestiae eligendi quos quibusdam a. Excepturi voluptatibus ad tempore est? Cum, pariatur eius.
+                            Possimus illum et minima similique. Eos magnam eum adipisci, consequuntur tempore ratione modi dignissimos perspiciatis ut possimus iste placeat voluptatem eaque vitae! Soluta placeat possimus ad eum voluptas voluptatum sit.</p>
+                            <svg class="icon-plus">
+                                <use xlink:href="symbol-defs.svg#icon-plus"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="download">
+                <div class="wrapper">
+                    <div class="info">
+                        <h1>Download our App now !</h1>
+                        <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+                        <div class="download">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.vladick.FNAM2&hl=ru&gl=US"><img src="files/trial/en_badge_web_generic.svg" alt=""></a>
+                            <a target="_blank" href="https://apps.apple.com/ru/app/doodle-jump-insanely-good/id456355158"><img src="files/trial/download-on-the-app-store-apple.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="files/trial/Vector Smart Object.svg" alt="">
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <h1><span>App</span>Lab</h1>
+        <nav>
+            <a href="#trusted">Home</a>
+            <a href="#ultimate_features">Key features</a>
+            <a href="#prices">Pricing</a>
+            <a href="#clients_and_faq">Testimonial</a>
+            <a href="#main_faq">FAQ</a>
+        </nav>
+        <nav class="social">
+            <a target="_blank" href="https://ru-ru.facebook.com/groups/ESETNOD32AntiVirus/">
+                <svg class="icon-facebook">
+                    <use xlink:href="symbol-defs.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="https://twitter.com/roizmangbn">
+                <svg class="icon-twitter">
+                    <use xlink:href="symbol-defs.svg#icon-twitter"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="https://slack.com/intl/ru-ru/">
+                <svg class="icon-slack">
+                    <use xlink:href="symbol-defs.svg#icon-slack"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="https://github.com/guaNa228">
+                <svg class="icon-github-sign">
+                    <use xlink:href="symbol-defs.svg#icon-github-sign"></use>
+                </svg>
+            </a>
+        </nav>
+        <p>Copyright© Arifur Rahman Tushar 2019. All rights reserved</p>
+    </footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
