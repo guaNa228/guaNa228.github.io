@@ -37,6 +37,9 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+.global_wrapper {
+  overflow-x: hidden;
+}
 div.try_for_free_btn {
   flex-basis: 170px;
   height: 60px;
@@ -1459,8 +1462,10 @@ article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.
   height: 50px;
   border-radius: 50%;
 }
-article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .controls div:hover:not(.deactivated)::after {
-  animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+@media screen and (min-width: 870px) {
+  article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .controls div:hover:not(.deactivated)::after {
+    animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 }
 article#clients_and_faq section#clients .wrapper .info .slider .slider_item:nth-child(2) {
   left: 100%;

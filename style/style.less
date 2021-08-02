@@ -46,7 +46,9 @@ html {
     overflow-x: hidden;
 }
 
-
+.global_wrapper {
+    overflow-x: hidden;
+}
 
 div.try_for_free_btn {
     flex-basis: 170px;
@@ -1472,11 +1474,11 @@ article#clients_and_faq {
                                     }
                                     &:hover {
                                         @media screen and (min-width: 870px) {
-                                            
+                                            &:not(.deactivated)::after {
+                                                animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                            }
                                         }
-                                        &:not(.deactivated)::after {
-                                            animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                                        }
+                                        
                                     }
                                 }
                             }
