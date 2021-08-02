@@ -977,12 +977,12 @@ article#reasons_and_prices {
                     grid-template-rows: repeat(2, 1fr);
                     gap: 65px 100px;
                     @media screen and (max-width: 1100px) {
-                        gap: 35px 50px;
+                        gap: 45px 50px;
                     }
                     @media screen and (max-width: 430px) {
                         grid-template-columns: repeat(1, 1fr);
                         grid-template-rows: repeat(1, 1fr);
-                        gap: 15px 25px;
+                        gap: 45px 25px;
                     }
                     .feature_item {
                         .logo {
@@ -1020,10 +1020,15 @@ article#reasons_and_prices {
                             color: @DarkBlue;
                             font-family: Poppins-SemiBold;
                         }
+                        p {
+                            margin-bottom: 0px;
+                        }
                     }
 
                 }
                 a.try_for_free_btn {
+                    margin-top: 55px;
+                    max-width: 135px;
                     text-decoration: none;
                     display: block;
                     cursor: pointer;
