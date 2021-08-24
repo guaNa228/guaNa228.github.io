@@ -3,7 +3,7 @@
 @font-face {
   font-family: Poppins;
   /* Имя шрифта */
-  src: url(../fonts/Poppins-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
   /* Путь к файлу со шрифтом */
   font-weight: 400;
   font-style: normal;
@@ -11,7 +11,7 @@
 @font-face {
   font-family: Poppins-SemiBold;
   /* Имя шрифта */
-  src: url(../fonts/Poppins-SemiBold.ttf);
+  src: url(../fonts/Montserrat-SemiBold.ttf);
   /* Путь к файлу со шрифтом */
   font-weight: 600;
   font-style: normal;
@@ -19,7 +19,7 @@
 @font-face {
   font-family: Poppins-Bold;
   /* Имя шрифта */
-  src: url(../fonts/Poppins-Bold.ttf);
+  src: url(../fonts/Montserrat-Bold.ttf);
   /* Путь к файлу со шрифтом */
   font-weight: 700;
   font-style: normal;
@@ -35,9 +35,6 @@
 */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-.global_wrapper {
   overflow-x: hidden;
 }
 div.try_for_free_btn {
@@ -203,6 +200,7 @@ header .wrapper #topPanel {
   margin-bottom: 65px;
 }
 header .wrapper #topPanel span.logo {
+  z-index: 1;
   display: inline-flex;
   font-size: 30px;
   font-family: Poppins-Bold;
@@ -216,11 +214,12 @@ header .wrapper #topPanel svg.icon-menu {
 }
 header .wrapper #topPanel nav {
   display: flex;
-  flex-basis: 690px;
+  flex-basis: 530px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-family: Poppins;
+  margin-left: 10px;
 }
 header .wrapper #topPanel nav a {
   display: inline-flex;
@@ -247,6 +246,10 @@ header .wrapper #topPanel nav a.try_for_free_btn {
 }
 header .wrapper #topPanel nav a.try_for_free_btn:hover {
   background: #1a00ad;
+}
+header .wrapper #topPanel nav a.try_for_free_btn img {
+  width: 50px;
+  height: 50px;
 }
 @media screen and (max-width: 1100px) {
   header .wrapper #topPanel nav {
@@ -304,9 +307,6 @@ header .wrapper #main #phone_image {
   flex-basis: 50%;
   display: flex;
   justify-content: center;
-}
-header .wrapper #main #phone_image img {
-  height: 47.5vw;
 }
 @media screen and (max-width: 1100px) {
   header .wrapper #main #phone_image {
@@ -410,10 +410,10 @@ header .wrapper #main #content .btns span a:hover {
 }
 header .wrapper #main #content .btns a.try_for_free_btn {
   text-decoration: none;
-  display: block;
+  display: flex;
   cursor: pointer;
   font-family: Poppins-Bold;
-  padding: 20px 40px;
+  padding: 10px 15px;
   font-size: 16px;
   color: white;
   background: #2500f9;
@@ -421,9 +421,14 @@ header .wrapper #main #content .btns a.try_for_free_btn {
   outline: none;
   border: none;
   transition: 0.5s;
+  align-items: center;
 }
 header .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #1a00ad;
+}
+header .wrapper #main #content .btns a.try_for_free_btn img {
+  width: 30px;
+  margin-right: 10px;
 }
 header .bg {
   width: 100%;
@@ -453,7 +458,6 @@ header .bg_extended {
 article#features_and_companies {
   margin-top: 150px;
   background-color: #ffffff;
-  padding-bottom: 70px;
   border-bottom: 2px solid #f4f4f4;
 }
 article#features_and_companies section#trusted .wrapper {
@@ -482,7 +486,7 @@ article#features_and_companies section#trusted .wrapper div.companies_wrapper di
   width: 100%;
 }
 article#features_and_companies section#features {
-  margin: 120px auto 140px;
+  margin: 0 auto;
   overflow: hidden;
 }
 article#features_and_companies section#features .wrapper {
@@ -499,10 +503,9 @@ article#features_and_companies section#features .wrapper {
 }
 article#features_and_companies section#features .wrapper .image {
   margin-right: 35px;
-  background-image: url(../files/features_icons/features_phone_bg.svg);
   background-position: center center;
   background-size: contain;
-  flex-basis: 56.7%;
+  flex-basis: 44%;
   height: 575px;
   background-repeat: no-repeat;
   display: flex;
@@ -536,7 +539,9 @@ article#features_and_companies section#features .wrapper .info h5 {
 article#features_and_companies section#features .wrapper .info .features_container {
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  margin-top: 20px;
+  font-family: Poppins;
+  color: #616368;
 }
 article#features_and_companies section#features .wrapper .info .features_container .feature {
   justify-content: space-between;
@@ -606,7 +611,7 @@ article#features_and_companies section#features .wrapper .info .features_contain
   color: #616368;
 }
 article#features_and_companies section#jackpots {
-  margin-bottom: 110px;
+  margin-top: 50px;
 }
 @media screen and (max-width: 1100px) {
   article#features_and_companies section#jackpots {
@@ -670,6 +675,10 @@ article#features_and_companies section#jackpots .wrapper .head p {
   article#features_and_companies section#jackpots .wrapper .head p {
     margin-top: 20px;
   }
+}
+article#features_and_companies section#jackpots .wrapper .head p em {
+  font-style: normal;
+  color: #242f51;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items {
   width: 100%;
@@ -851,7 +860,8 @@ article#reasons_and_prices section#why_choose_app .wrapper h1 {
   margin-bottom: 45px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper h5 {
-  max-width: 660px;
+  text-align: center;
+  max-width: 100%;
   font-family: Poppins;
   font-size: 16px;
   line-height: 26px;
@@ -870,7 +880,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
     grid-template-rows: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 530px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -882,17 +892,25 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   align-items: center;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
-  width: 85px;
-  height: 85px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffecef;
   margin-bottom: 35px;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper svg {
-  width: 70%;
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper img {
+  width: 300%;
+  object-fit: cover;
+}
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
+  width: 250px;
+}
+@media screen and (max-width: 770px) {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
+    width: 220px;
+  }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason h3 {
   font-family: Poppins-SemiBold;
@@ -901,25 +919,96 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   margin-bottom: 25px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason p {
-  font-size: 16px;
+  font-size: 18px;
   color: #616368;
   line-height: 26px;
   font-family: Poppins;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason:nth-child(2) div.logo_wrapper {
-  background: #eaf9ff;
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.sources {
+  margin-top: 30px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason:nth-child(3) div.logo_wrapper {
-  background: #fff6d3;
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.sources a svg {
+  width: 36px;
+  height: 36px;
+  fill: #616368;
+  transition: 0.5s;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason:nth-child(4) div.logo_wrapper {
-  background: #e4ffee;
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.sources a svg:hover {
+  fill: #0AACFC;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason:nth-child(5) div.logo_wrapper {
-  background: #f4f4ff;
+article#reasons_and_prices section#timy {
+  width: 100%;
+  margin-bottom: 190px;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason:nth-child(6) div.logo_wrapper {
-  background: #fdeee4;
+article#reasons_and_prices section#timy .wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0px 180px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1215px) {
+  article#reasons_and_prices section#timy .wrapper {
+    padding: 0 15px;
+  }
+}
+article#reasons_and_prices section#timy .wrapper h1 {
+  max-width: 440px;
+  font-family: Poppins-SemiBold;
+  font-size: 36px;
+  line-height: 46px;
+  color: #242f51;
+  margin-bottom: 45px;
+}
+article#reasons_and_prices section#timy .wrapper h5 {
+  text-align: center;
+  max-width: 100%;
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: 26px;
+  color: #616368;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, min-max(220px, 1fr));
+  grid-template-rows: repeat(2, min-max(220px, 1fr));
+  gap: 70px 80px;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid .reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid .reason div.logo_wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid .reason div.logo_wrapper img {
+  width: 300%;
+  object-fit: cover;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid .reason h3 {
+  font-family: Poppins-SemiBold;
+  color: #242f51;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+article#reasons_and_prices section#timy .wrapper .reasonsGrid .reason p {
+  font-size: 16px;
+  color: #616368;
+  line-height: 26px;
+  font-family: Poppins;
 }
 article#reasons_and_prices section#ultimate_features {
   margin-left: 15%;
@@ -960,14 +1049,13 @@ article#reasons_and_prices section#ultimate_features .wrapper .info .features_gr
 }
 @media screen and (max-width: 1100px) {
   article#reasons_and_prices section#ultimate_features .wrapper .info .features_grid {
-    gap: 45px 50px;
+    gap: 65px 50px;
   }
 }
 @media screen and (max-width: 430px) {
   article#reasons_and_prices section#ultimate_features .wrapper .info .features_grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 45px 25px;
   }
 }
 article#reasons_and_prices section#ultimate_features .wrapper .info .features_grid .feature_item .logo {
@@ -999,12 +1087,7 @@ article#reasons_and_prices section#ultimate_features .wrapper .info .features_gr
   color: #242f51;
   font-family: Poppins-SemiBold;
 }
-article#reasons_and_prices section#ultimate_features .wrapper .info .features_grid .feature_item p {
-  margin-bottom: 0px;
-}
 article#reasons_and_prices section#ultimate_features .wrapper .info a.try_for_free_btn {
-  margin-top: 55px;
-  max-width: 135px;
   text-decoration: none;
   display: block;
   cursor: pointer;
@@ -1406,11 +1489,6 @@ article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.
   border-radius: 50%;
   margin-right: 30px;
 }
-@media screen and (max-width: 870px) {
-  article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .author img {
-    margin-right: 10px;
-  }
-}
 article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .author .name_post h6 {
   font-size: 18px;
   color: #242f51;
@@ -1473,10 +1551,8 @@ article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.
   height: 50px;
   border-radius: 50%;
 }
-@media screen and (min-width: 870px) {
-  article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .controls div:hover:not(.deactivated)::after {
-    animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+article#clients_and_faq section#clients .wrapper .info .slider .slider_item div.footer .controls div:hover:not(.deactivated)::after {
+  animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 article#clients_and_faq section#clients .wrapper .info .slider .slider_item:nth-child(2) {
   left: 100%;

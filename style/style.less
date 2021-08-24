@@ -11,21 +11,21 @@
 
 @font-face {
     font-family: Poppins; /* Имя шрифта */
-    src: url(../fonts/Poppins-Regular.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Poppins-SemiBold; /* Имя шрифта */
-    src: url(../fonts/Poppins-SemiBold.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/Montserrat-SemiBold.ttf); /* Путь к файлу со шрифтом */
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: Poppins-Bold; /* Имя шрифта */
-    src: url(../fonts/Poppins-Bold.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/Montserrat-Bold.ttf); /* Путь к файлу со шрифтом */
     font-weight: 700;
     font-style: normal;
 }
@@ -46,9 +46,7 @@ html {
     overflow-x: hidden;
 }
 
-.global_wrapper {
-    overflow-x: hidden;
-}
+
 
 div.try_for_free_btn {
     flex-basis: 170px;
@@ -225,6 +223,7 @@ header {
             align-items: center;
             margin-bottom: 65px;
             span.logo {
+                z-index: 1;
                 display: inline-flex;
                 font-size: 30px;
                 font-family: Poppins-Bold;
@@ -238,11 +237,12 @@ header {
             }
             nav {
                 display: flex;
-                flex-basis: 690px;
+                flex-basis: 530px;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 font-family: Poppins;
+                margin-left: 10px;
                 a {
                     display: inline-flex;
                     text-decoration: none;
@@ -267,6 +267,10 @@ header {
                     transition: 0.5s;
                     &:hover {
                         background: darken(@Blue, 15%);
+                    }
+                    img {
+                        width: 50px;
+                        height: 50px;
                     }
                 }
             }
@@ -326,9 +330,6 @@ header {
                 flex-basis: 50%;
                 display: flex;
                 justify-content: center;
-                img {
-                    height: 47.5vw;
-                }
                 @media screen and (max-width: 1100px) {
                     display: none;
                 }
@@ -424,10 +425,10 @@ header {
                     }
                     a.try_for_free_btn {
                         text-decoration: none;
-                        display: block;
+                        display: flex;
                         cursor: pointer;
                         font-family: Poppins-Bold;
-                        padding: 20px 40px;
+                        padding: 10px 15px;
                         font-size: 16px;
                         color: white;
                         background: @Blue;
@@ -435,8 +436,13 @@ header {
                         outline: none;
                         border: none;
                         transition: 0.5s;
+                        align-items: center;
                         &:hover {
                             background: darken(@Blue, 15%);
+                        }
+                        img {
+                            width: 30px;
+                            margin-right: 10px;
                         }
                     }
                 }
@@ -474,7 +480,6 @@ header {
 article#features_and_companies {
     margin-top: 150px;
     background-color: #ffffff;
-    padding-bottom: 70px;
     border-bottom: 2px solid #f4f4f4;
     section#trusted {
         .wrapper {
@@ -505,7 +510,7 @@ article#features_and_companies {
         }
     }
     section#features {
-        margin: 120px auto 140px;
+        margin: 0 auto;
         overflow: hidden;
         .wrapper {
             max-width: 1075px;
@@ -518,10 +523,9 @@ article#features_and_companies {
             }
             .image {
                 margin-right: 35px;
-                background-image: url(../files/features_icons/features_phone_bg.svg);
                 background-position: center center;
                 background-size: contain;
-                flex-basis: 56.7%;
+                flex-basis: 44%;
                 height: 575px;
                 background-repeat: no-repeat;
                 display: flex;
@@ -553,7 +557,9 @@ article#features_and_companies {
                 .features_container {
                     display: flex;
                     flex-direction: column;
-                    margin-top: 90px;
+                    margin-top: 20px;
+                    font-family: Poppins;
+                    color: @Gray;
                     .feature {
                         justify-content: space-between;
                         align-items: center;
@@ -636,7 +642,7 @@ article#features_and_companies {
         }
     }
     section#jackpots {
-        margin-bottom: 110px;
+        margin-top: 50px;
         @media screen and (max-width: 1100px) {
             padding: 0px 5px;
         }
@@ -686,6 +692,10 @@ article#features_and_companies {
                     color: @Gray;
                     @media screen and (max-width: 900px) {
                         margin-top: 20px;
+                    }
+                    em {
+                        font-style: normal;
+                        color: @DarkBlue;
                     }
                 }
             }
@@ -865,7 +875,8 @@ article#reasons_and_prices {
                 margin-bottom: 45px;
             }
             h5 {
-                max-width: 660px;
+                text-align: center;
+                max-width: 100%;
                 font-family: Poppins;
                 font-size: 16px;
                 line-height: 26px;
@@ -881,7 +892,7 @@ article#reasons_and_prices {
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(2, 1fr);
                 }
-                @media screen and (max-width: 430px) {
+                @media screen and (max-width: 530px) {
                     grid-template-columns: repeat(1, 1fr);
                     grid-template-rows: repeat(1, 1fr);
                 }
@@ -890,16 +901,110 @@ article#reasons_and_prices {
                     flex-direction: column;
                     align-items: center;
                     div.logo_wrapper {
-                        width: 85px;
-                        height: 85px;
+                        width: 120px;
+                        height: 120px;
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        background: #ffecef;
                         margin-bottom: 35px;
-                        svg {
-                            width: 70%;
+                        img {
+                            width: 300%;
+                            object-fit: cover;
+                        }
+                        &.expanded {
+                            width: 250px;
+                            @media screen and (max-width: 770px) {
+                                width: 220px;
+                            }
+                        }
+                    }
+                    h3 {
+                        font-family: Poppins-SemiBold;
+                        color: @DarkBlue;
+                        font-size: 20px;
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        font-size: 18px;
+                        color: @Gray;
+                        line-height: 26px;
+                        font-family: Poppins;
+                    }
+                    div.sources {
+                        margin-top: 30px;
+                        width: 90%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-around;
+                        a {
+                            svg {
+                                width: 36px;
+                                height: 36px;
+                                fill: #616368;
+                                transition: .5s;
+                                &:hover {
+                                    fill: #0AACFC;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section#timy {
+        width: 100%;
+        margin-bottom: 190px;
+        .wrapper {
+            margin: 0 auto;
+            max-width: 1170px;
+            padding: 0px 180px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media screen and (max-width: 1215px) {
+                padding: 0 15px;
+            }
+            h1 {
+                max-width: 440px;
+                font-family: Poppins-SemiBold;
+                font-size: 36px;
+                line-height: 46px;
+                color: @DarkBlue;
+                margin-bottom: 45px;
+            }
+            h5 {
+                text-align: center;
+                max-width: 100%;
+                font-family: Poppins;
+                font-size: 16px;
+                line-height: 26px;
+                color: @Gray;
+            }
+            .reasonsGrid {
+                display: grid;
+                grid-template-columns: repeat(3, min-max(220px, 1fr));
+                grid-template-rows: repeat(2, min-max(220px, 1fr));
+                gap: 70px 80px;
+                .reason {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    div.logo_wrapper {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 35px;
+                        img {
+                            width: 300%;
+                            object-fit: cover;
                         }
                     }
                     h3 {
@@ -913,31 +1018,6 @@ article#reasons_and_prices {
                         color: @Gray;
                         line-height: 26px;
                         font-family: Poppins;
-                    }
-                    &:nth-child(2) {
-                        div.logo_wrapper {
-                            background: #eaf9ff;
-                        }
-                    }
-                    &:nth-child(3) {
-                        div.logo_wrapper {
-                            background: #fff6d3;
-                        }
-                    }
-                    &:nth-child(4) {
-                        div.logo_wrapper {
-                            background: #e4ffee;
-                        }
-                    }
-                    &:nth-child(5) {
-                        div.logo_wrapper {
-                            background: #f4f4ff;
-                        }
-                    }
-                    &:nth-child(6) {
-                        div.logo_wrapper {
-                            background: #fdeee4;
-                        }
                     }
                 }
             }
@@ -977,12 +1057,11 @@ article#reasons_and_prices {
                     grid-template-rows: repeat(2, 1fr);
                     gap: 65px 100px;
                     @media screen and (max-width: 1100px) {
-                        gap: 45px 50px;
+                        gap: 65px 50px;
                     }
                     @media screen and (max-width: 430px) {
                         grid-template-columns: repeat(1, 1fr);
                         grid-template-rows: repeat(1, 1fr);
-                        gap: 45px 25px;
                     }
                     .feature_item {
                         .logo {
@@ -1020,15 +1099,10 @@ article#reasons_and_prices {
                             color: @DarkBlue;
                             font-family: Poppins-SemiBold;
                         }
-                        p {
-                            margin-bottom: 0px;
-                        }
                     }
 
                 }
                 a.try_for_free_btn {
-                    margin-top: 55px;
-                    max-width: 135px;
                     text-decoration: none;
                     display: block;
                     cursor: pointer;
@@ -1414,9 +1488,6 @@ article#clients_and_faq {
                                     object-fit: cover;
                                     border-radius: 50%;
                                     margin-right: 30px;
-                                    @media screen and (max-width: 870px) {
-                                        margin-right: 10px;
-                                    }
                                 }
                                 .name_post {
                                     h6 {
@@ -1482,12 +1553,9 @@ article#clients_and_faq {
                                         border-radius: 50%;
                                     }
                                     &:hover {
-                                        @media screen and (min-width: 870px) {
-                                            &:not(.deactivated)::after {
-                                                animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                                            }
+                                        &:not(.deactivated)::after {
+                                            animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                                         }
-                                        
                                     }
                                 }
                             }
