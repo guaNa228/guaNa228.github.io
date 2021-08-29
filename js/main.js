@@ -3,11 +3,13 @@
 let clicksDone = false;
 
 //price mode swap
-
+/*
 let modeSwapMenu = document.querySelector("div.mode_swap");
 let priceTypes = document.querySelectorAll("div.mode_swap span");
 let animationBg = document.querySelector("span.blue_back");
 let priceCards = document.querySelectorAll("div.price_card")
+
+console.log(modeSwapMenu);
 
 modeSwapMenu.addEventListener("click", function(event) {
     if (priceTypes[0].classList.contains("active")) {
@@ -28,7 +30,7 @@ modeSwapMenu.addEventListener("click", function(event) {
         });
     }
 });
-
+*/
 //clients review slider
 
 let sliderNextBtn = document.querySelectorAll(".controls .forward");
@@ -66,7 +68,7 @@ sliderPrevBtn.forEach(function(item) {
 });
 
 //client review slider auto rotating
-
+/*
 function prevSlideAuto() {
     if (clicksDone==false) {
         sliderItems.forEach(function(item) {
@@ -129,7 +131,7 @@ function openAccordion() {
         this.parentElement.classList.add("animated");
     }, 100);
 }
-
+*/
 //mobile menu animation
 
 let mobileMenuOpenButton = document.querySelector(".icon-menu");
