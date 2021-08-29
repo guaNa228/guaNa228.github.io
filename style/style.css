@@ -897,7 +897,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper img {
   width: 300%;
@@ -915,7 +915,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   font-family: Poppins-SemiBold;
   color: #242f51;
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason p {
   font-size: 18px;
@@ -924,7 +924,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   font-family: Poppins;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.sources {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 90%;
   height: auto;
   display: flex;

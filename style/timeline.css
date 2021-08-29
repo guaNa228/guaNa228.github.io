@@ -213,12 +213,12 @@ h1 {
   margin-bottom: 20px;
   position: relative;
 }
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 890px) {
   .timeline .event {
     padding-top: 30px;
   }
 }
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 890px) {
   .timeline .event:first-child:before {
     left: -84px;
   }
@@ -253,7 +253,7 @@ h1 {
   min-width: 120px;
   font-family: 'Saira', sans-serif;
 }
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 890px) {
   .timeline .event:before {
     left: -80px;
   }
