@@ -243,14 +243,6 @@ h1 {
   display: block;
   top: 0;
 }
-.timeline .event:first-child:before {
-  left: -221px;
-}
-@media screen and (max-width: 890px) {
-  .timeline .event:first-child:before {
-    left: 0;
-  }
-}
 .timeline .event:before {
   left: -217.5px;
   color: #004ffc;
