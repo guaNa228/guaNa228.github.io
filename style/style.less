@@ -478,8 +478,66 @@ header {
     }
 }
 
+section#why_chess {
+    margin: 130px 15px 15px;
+    .wrapper {
+       max-width: 1075px;
+       margin: 0 auto;
+        .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            @media screen and (max-width: 860px) {
+                display: block;
+            }
+            @media screen and (max-width: 895px) {
+                margin-bottom: 30px;
+            }
+            h1 {
+                margin: 0;
+                display: block;
+                flex-basis: 450px;
+                font-family: Poppins;
+                font-size: 40px;
+                line-height: 50px;
+                font-weight: 600;
+                color: @DarkBlue;
+            }
+            span.sep {
+                display: block;
+                flex-basis: 1px;
+                height: 150px;
+                opacity: 0.38;
+                background-color: #4b4a48;
+                @media screen and (max-width: 900px) {
+                    display: none;
+                }
+            }
+            p {
+                margin: 0;
+                flex-basis: 400px;
+                font-family: Poppins;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+                color: @Gray;
+                @media screen and (max-width: 900px) {
+                    margin-top: 20px;
+                }
+                em {
+                    font-style: normal;
+                    color: @DarkBlue;
+                }
+            }
+        }
+    }
+}
+
 article#features_and_companies {
-    margin-top: 150px;
+    margin-top: 70px;
     background-color: #ffffff;
     border-bottom: 2px solid #f4f4f4;
     section#trusted {
@@ -642,8 +700,12 @@ article#features_and_companies {
             }
         }
     }
+
+    
+
     section#jackpots {
         margin-top: 50px;
+        margin-bottom: 50px;
         @media screen and (max-width: 1100px) {
             padding: 0px 5px;
         }
