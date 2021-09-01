@@ -6,6 +6,7 @@
   src: url(../fonts/Montserrat-Regular.ttf);
   /* Путь к файлу со шрифтом */
   font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: Poppins-SemiBold;
@@ -188,7 +189,7 @@ header .wrapper {
   box-sizing: padding-box;
   position: relative;
   margin: 0 auto;
-  padding-top: 110px;
+  padding-top: 10px;
   background-color: #fdfdfe;
 }
 header .wrapper #topPanel {
@@ -199,6 +200,7 @@ header .wrapper #topPanel {
   margin-bottom: 65px;
 }
 header .wrapper #topPanel span.logo {
+  flex-basis: 200px;
   z-index: 1;
   display: inline-flex;
   font-size: 30px;

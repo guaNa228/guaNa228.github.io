@@ -95,7 +95,7 @@ h1 {
     }
     &:first-child:before {
         @media screen and (max-width: 890px) {
-            left: -80px;
+            left: -85px;
         }
     }
     &:last-child {
@@ -118,9 +118,10 @@ h1 {
       display: block;
       top: 0;
     }
-
+    &:first-child:before {
+      left: -221px;
+    }
     &:before {
-      
       left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;    
       color: #004ffc;   
       content: attr(data-date);

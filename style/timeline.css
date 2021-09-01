@@ -220,7 +220,7 @@ h1 {
 }
 @media screen and (max-width: 890px) {
   .timeline .event:first-child:before {
-    left: -80px;
+    left: -85px;
   }
 }
 .timeline .event:last-child {
@@ -242,6 +242,9 @@ h1 {
   position: absolute;
   display: block;
   top: 0;
+}
+.timeline .event:first-child:before {
+  left: -221px;
 }
 .timeline .event:before {
   left: -217.5px;
