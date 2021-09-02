@@ -33,6 +33,9 @@
     margin: 0 auto;
 }
 */
+img {
+  pointer-events: none;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
