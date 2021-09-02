@@ -1833,11 +1833,12 @@ footer nav.social a:hover {
   transform: none;
 }
 footer nav.social a:hover svg {
-  fill: white;
+  height: 35px;
+  width: 35px;
 }
 footer nav.social a svg {
   transition: 0.5s;
-  fill: #273043;
+  fill: white;
   height: 30px;
   width: 30px;
 }
