@@ -2,35 +2,8 @@
 
 let clicksDone = false;
 
-//price mode swap
-/*
-let modeSwapMenu = document.querySelector("div.mode_swap");
-let priceTypes = document.querySelectorAll("div.mode_swap span");
-let animationBg = document.querySelector("span.blue_back");
-let priceCards = document.querySelectorAll("div.price_card")
+let counterDone = false;
 
-console.log(modeSwapMenu);
-
-modeSwapMenu.addEventListener("click", function(event) {
-    if (priceTypes[0].classList.contains("active")) {
-        priceTypes[0].classList.remove("active");
-        priceTypes[1].classList.add("active");
-        animationBg.style.left = "140px";
-        priceCards.forEach(function(el) {
-            if (el.classList.contains("monthly")) el.style.display = "none";
-            else el.style.display = "block";
-        });
-    } else {
-        priceTypes[1].classList.remove("active");
-        priceTypes[0].classList.add("active");
-        animationBg.style.left = "0";
-        priceCards.forEach(function(el) {
-            if (el.classList.contains("annually")) el.style.display = "none";
-            else el.style.display = "block";
-        });
-    }
-});
-*/
 //clients review slider
 
 let sliderNextBtn = document.querySelectorAll(".controls .forward");
@@ -66,72 +39,6 @@ sliderNextBtn.forEach(function(item) {
 sliderPrevBtn.forEach(function(item) {
     item.addEventListener("click", prevSlide);
 });
-
-//client review slider auto rotating
-/*
-function prevSlideAuto() {
-    if (clicksDone==false) {
-        sliderItems.forEach(function(item) {
-            percentage = parseInt(parseInt(window.getComputedStyle(item, null).getPropertyValue("left"))/parseInt(window.getComputedStyle(item, null).getPropertyValue("width")))*100;
-            item.style.left = (percentage+100)+"%";
-            item.style.visibility = (item.style.left=="0%") ? "visible" : "hidden";
-        });
-    }
-}
-
-function nextSlideAuto() {
-    if (clicksDone==false) {
-        sliderItems.forEach(function(item) {
-            percentage = parseInt(parseInt(window.getComputedStyle(item, null).getPropertyValue("left"))/parseInt(window.getComputedStyle(item, null).getPropertyValue("width")))*100;
-            item.style.left = (percentage-100)+"%";
-            item.style.visibility = (item.style.left=="0%") ? "visible" : "hidden";
-        });
-    }
-}
-
-function autoSlide() {
-        if (window.getComputedStyle(sliderItems[0], null).getPropertyValue("left")=="0px") {
-            for (let i = 0; i<3; i++) {
-                setTimeout(function() {
-                    nextSlideAuto();
-                }, 10000*i);
-            }
-        }
-        if (window.getComputedStyle(sliderItems[3], null).getPropertyValue("left")=="0px") {
-            console.log(2);
-            for (let i = 0; i<3; i++) {
-                setTimeout(function() {
-                    prevSlideAuto();
-                }, 10000*i);
-            }
-        }
-}
-
-autoSlide();
-
-setInterval(autoSlide, 30000);
-
-//accordion
-
-accordionOpenBtns = document.querySelectorAll("svg.icon-plus");
-
-accordionOpenBtns.forEach(function(item) {
-    item.addEventListener("click", openAccordion);
-});
-
-function openAccordion() {
-    console.log(this.parentElement.children[1]);
-    this.style.display = "none";
-    this.parentElement.children[1].style.display = "block";
-    setTimeout(() => {
-        this.parentElement.classList.add("opened");
-        this.parentElement.children[1].style.marginTop = '40px';
-    }, 4);
-    setTimeout(()=> {
-        this.parentElement.classList.add("animated");
-    }, 100);
-}
-*/
 //mobile menu animation
 
 let mobileMenuOpenButton = document.querySelector(".icon-menu");
@@ -188,4 +95,40 @@ mobileMenuLinks.forEach((item) => {
         }, 100);
     }
 });
+
+//counter animation
+let globalIntervals = [];
+let tempInterval;
+let countingBlocks = Array.from(document.querySelectorAll(".jackpot_items .jackpot .logo"));
+
+const INCREMENTS = [1, 1, 267];
+const INTERVALS = [150, 100, 25];
+
+function startCountingAnimation(animatedBlock, index) {
+    let animationValue = animatedBlock.dataset.value;
+    tempInterval = setInterval(increaseCounter, INTERVALS[index], animatedBlock, animationValue, INCREMENTS[index]);
+    tempInterval.maximum = animationValue;
+    globalIntervals.push(tempInterval);
+}
+
+function increaseCounter(block, maxValue, increment) {
+    block.textContent = parseInt(block.textContent) + increment;
+    if (parseInt(block.textContent)+increment>=maxValue) {
+        block.textContent = maxValue;
+        clearInterval(countingBlocks.findIndex((item) => {
+            return item.dataset.value==maxValue;
+        })+2);
+    }
+}
+
+//counter start
+window.addEventListener("scroll", function() {
+    if (document.querySelector(".jackpot_items").getBoundingClientRect().top-window.innerHeight<=0 && !counterDone) {
+        counterDone = true;
+        countingBlocks.forEach((item, index) => {
+            startCountingAnimation(item, index);
+        });
+    }
+});
+
 

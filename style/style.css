@@ -790,36 +790,29 @@ article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot
   display: flex;
   align-items: center;
   justify-content: center;
-}
-article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot .logo svg {
-  width: 58px;
+  font-size: 24px;
+  font-family: Poppins;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(1) h4 {
   color: #f55767;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(1) .logo {
   background-color: #ffecef;
-}
-article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(1) .logo svg {
-  fill: #f55767;
+  color: #f55767;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(2) h4 {
   color: #2563ff;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(2) .logo {
   background-color: #f4f4ff;
-}
-article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(2) .logo svg {
-  fill: #2563ff;
+  color: #2563ff;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(3) h4 {
   color: #40975f;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(3) .logo {
   background-color: #e4ffee;
-}
-article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(3) .logo svg {
-  fill: #40975f;
+  color: #40975f;
 }
 article#features_and_companies section#designed_and_built {
   display: block;
@@ -899,7 +892,6 @@ article#features_and_companies section#designed_and_built .wrapper .info a.try_f
 }
 article#reasons_and_prices {
   margin-top: 140px;
-  padding-bottom: 100px;
   border-bottom: 2px solid #f4f4f4;
 }
 article#reasons_and_prices section#why_choose_app {
@@ -1796,12 +1788,13 @@ footer h1 span {
 }
 footer nav {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 footer nav a {
+  flex-basis: 150px;
   height: 40px;
   line-height: 40px;
   transition: 0.5s;
