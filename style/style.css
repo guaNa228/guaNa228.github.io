@@ -134,7 +134,7 @@ nav.mobile a {
   overflow: hidden;
 }
 nav.mobile a::after {
-  transition: 1s;
+  transition: 0.5s;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   content: "";
   position: absolute;
@@ -268,7 +268,7 @@ header .wrapper #topPanel nav a.try_for_free_btn img {
   }
 }
 header .wrapper .mobile_menu {
-  transition: 1s;
+  transition: 0.5s;
   width: 0;
   height: 0;
 }

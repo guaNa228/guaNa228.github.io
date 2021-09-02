@@ -60,14 +60,14 @@ mobileMenuOpenButton.onclick = function() {
     
     setTimeout(() => {
         animBlockWrapper.style.display = "block";
-        animBlock.style.animation = "whiteBlock .7s cubic-bezier(.23,.45,.38,.84)";
+        animBlock.style.animation = "whiteBlock .3s cubic-bezier(.23,.45,.38,.84)";
         setTimeout(() => {
             animBlockWrapper.style.display = "none";
             animBlock.style.animation = "";
             mobileNav.classList.add("active");
             closeMenuBtn.classList.add("active");
-        }, 700);
-    }, 1100);
+        }, 300);
+    }, 600);
 }
 
 closeMenuBtn.onclick = function() {
@@ -77,7 +77,7 @@ closeMenuBtn.onclick = function() {
     document.querySelector("html").style.overflowY = "scroll";
     setTimeout(() => {
         mobileMenu.style.display = "none";
-    }, 1000);
+    }, 500);
 }
 
 mobileMenuLinks.forEach((item) => {
