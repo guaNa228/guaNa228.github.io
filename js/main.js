@@ -131,4 +131,22 @@ window.addEventListener("scroll", function() {
     }
 });
 
+//dark mode
+
+let darkThemeButton = document.querySelector(".dark_theme_button");
+let header = document.querySelector("header");
+const darkmode =  new Darkmode();
+
+darkThemeButton.addEventListener("click", function() {
+    changePartnersLogos();
+    header.classList.toggle("dark");
+    darkmode.toggle();
+});
+
+function changePartnersLogos() {
+    Array.from(document.querySelectorAll(".logo_wrapper.changeable img")).forEach(function(item) {
+        if (header.classList.contains("dark")) item.src = item.src.replace("/svg_dark", "/svg", 1);
+        else item.src = item.src.replace("/svg", "/svg_dark", 1);
+    });
+}
 
