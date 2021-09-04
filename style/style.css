@@ -1795,6 +1795,7 @@ footer nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 footer nav a {
   flex-basis: 150px;
