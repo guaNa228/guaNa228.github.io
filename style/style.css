@@ -126,10 +126,15 @@ body {
   background: #242f51;
   justify-content: center;
   align-items: center;
+  transition: 1s;
 }
 .dark_theme_button svg {
+  transition: 1s;
   width: 35px;
   height: 35px;
+}
+.dark_theme_button.light {
+  background: white;
 }
 nav.mobile {
   z-index: -1;
@@ -211,8 +216,27 @@ header.dark {
 header.dark .wrapper {
   background: #000;
 }
+header.dark .wrapper #topPanel nav a {
+  color: #f6ebd1;
+}
+header.dark .wrapper #topPanel svg.icon-menu {
+  fill: #f6ebd1;
+}
 header.dark .wrapper #main #content h1 {
   color: #dbd0ae;
+}
+header.dark .wrapper #main #content p {
+  color: #9e9c97;
+}
+header.dark .wrapper #main #content .btns a.try_for_free_btn {
+  background: #daff06;
+  color: #000;
+}
+header.dark .wrapper #main #content .btns a.try_for_free_btn:hover {
+  background: #e5ff52;
+}
+header.dark .wrapper #main #content .btns a.try_for_free_btn svg {
+  fill: #000;
 }
 header .wrapper {
   max-width: 77%;
@@ -277,10 +301,6 @@ header .wrapper #topPanel nav a.try_for_free_btn {
 }
 header .wrapper #topPanel nav a.try_for_free_btn:hover {
   background: #1a00ad;
-}
-header .wrapper #topPanel nav a.try_for_free_btn img {
-  width: 50px;
-  height: 50px;
 }
 @media screen and (max-width: 1100px) {
   header .wrapper #topPanel nav {
@@ -457,9 +477,11 @@ header .wrapper #main #content .btns a.try_for_free_btn {
 header .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #1a00ad;
 }
-header .wrapper #main #content .btns a.try_for_free_btn img {
+header .wrapper #main #content .btns a.try_for_free_btn svg {
   width: 30px;
+  height: 30px;
   margin-right: 10px;
+  fill: white;
 }
 header .bg {
   width: 100%;

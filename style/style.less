@@ -147,9 +147,15 @@ body {
     background: @DarkBlue;
     justify-content: center;
     align-items: center;
+    transition: 1s;
+    
     svg {
+        transition: 1s;
         width: 35px;
         height: 35px;
+    }
+    &.light {
+        background: white;
     }
 }
 
@@ -236,10 +242,35 @@ header {
         background: #000;
         .wrapper {
             background: #000;
+            #topPanel {
+                nav {
+                    a {
+                        color: #f6ebd1;
+                    }
+                }
+                svg.icon-menu {
+                    fill: #f6ebd1;
+                }
+            }
             #main {
                 #content {
                     h1 {
                         color: #dbd0ae;
+                    }
+                    p {
+                        color: #9e9c97;
+                    }
+                    .btns {
+                        a.try_for_free_btn {
+                            background: #daff06;
+                            color: #000;
+                            &:hover {
+                                background: #e5ff52;
+                            }
+                            svg {
+                                fill: #000;
+                            }
+                        }
                     }
                 }
             }
@@ -305,10 +336,7 @@ header {
                     &:hover {
                         background: darken(@Blue, 15%);
                     }
-                    img {
-                        width: 50px;
-                        height: 50px;
-                    }
+                    
                 }
             }
             @media screen and (max-width: 1100px) {
@@ -477,9 +505,11 @@ header {
                         &:hover {
                             background: darken(@Blue, 15%);
                         }
-                        img {
+                        svg {
                             width: 30px;
+                            height: 30px;
                             margin-right: 10px;
+                            fill: white;
                         }
                     }
                 }

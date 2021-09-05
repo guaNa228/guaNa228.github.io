@@ -136,9 +136,14 @@ window.addEventListener("scroll", function() {
 let darkThemeButton = document.querySelector(".dark_theme_button");
 let header = document.querySelector("header");
 const darkmode =  new Darkmode();
+let extenededBg = document.querySelector(".bg_extended img");
 
 darkThemeButton.addEventListener("click", function() {
+    this.classList.toggle("light");
+    if (header.classList.contains("dark")) this.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
+    else this.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
     changePartnersLogos();
+    changeHeaderBackgrounds();
     header.classList.toggle("dark");
     darkmode.toggle();
 });
@@ -149,4 +154,16 @@ function changePartnersLogos() {
         else item.src = item.src.replace("/svg", "/svg_dark", 1);
     });
 }
+
+function changeHeaderBackgrounds() {
+    Array.from(document.querySelectorAll(".bg img")).forEach(function(item) {
+        if (header.classList.contains("dark")) item.src = item.src.replace("/dark/Layer5.svg", "/Layer5.svg", 1);
+        else item.src = item.src.replace("/Layer5.svg", "/dark/Layer5.svg", 1);
+    });
+
+    if (header.classList.contains("dark")) extenededBg.src = extenededBg.src.replace("/dark/bg.svg", "bg.svg", 1);
+    else extenededBg.src = extenededBg.src.replace("bg.svg", "/dark/bg.svg", 1);
+}
+
+
 
