@@ -133,20 +133,32 @@ window.addEventListener("scroll", function() {
 
 //dark mode
 
+
+
 let darkThemeButton = document.querySelector(".dark_theme_button");
 let header = document.querySelector("header");
 const darkmode =  new Darkmode();
 let extenededBg = document.querySelector(".bg_extended img");
 
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.querySelector('body').classList.contains("darkmode--activated")) darkModeToggle();
+});
+
 darkThemeButton.addEventListener("click", function() {
-    this.classList.toggle("light");
-    if (header.classList.contains("dark")) this.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
-    else this.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
+    darkModeToggle();
+    darkmode.toggle();
+});
+
+
+
+function darkModeToggle() {
+    darkThemeButton.classList.toggle("light");
+    if (header.classList.contains("dark")) darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
+    else darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
     changePartnersLogos();
     changeHeaderBackgrounds();
     header.classList.toggle("dark");
-    darkmode.toggle();
-});
+}
 
 function changePartnersLogos() {
     Array.from(document.querySelectorAll(".logo_wrapper.changeable img")).forEach(function(item) {
