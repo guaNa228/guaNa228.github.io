@@ -133,12 +133,11 @@ window.addEventListener("scroll", function() {
 
 //dark mode
 
-
-
 let darkThemeButton = document.querySelector(".dark_theme_button");
 let header = document.querySelector("header");
 const darkmode =  new Darkmode();
 let extenededBg = document.querySelector(".bg_extended img");
+let logo = document.querySelector("#topPanel span.logo img");
 
 document.addEventListener("DOMContentLoaded", function() {
     if (document.querySelector('body').classList.contains("darkmode--activated")) darkModeToggle();
@@ -149,12 +148,9 @@ darkThemeButton.addEventListener("click", function() {
     darkmode.toggle();
 });
 
-
-
 function darkModeToggle() {
-    darkThemeButton.classList.toggle("light");
-    if (header.classList.contains("dark")) darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
-    else darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
+    darkThemeButtonChange();
+    logoChange();
     changePartnersLogos();
     changeHeaderBackgrounds();
     header.classList.toggle("dark");
@@ -177,5 +173,16 @@ function changeHeaderBackgrounds() {
     else extenededBg.src = extenededBg.src.replace("bg.svg", "/dark/bg.svg", 1);
 }
 
+function darkThemeButtonChange() {
+    darkThemeButton.classList.toggle("light");
+    if (header.classList.contains("dark")) darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
+    else darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
+}
+
+function logoChange() {
+    console.log(logo);
+    if (header.classList.contains("dark")) logo.src = logo.src.replace("/dark/logo.svg", "logo.svg", 1);
+    else logo.src = logo.src.replace("logo.svg", "/dark/logo.svg", 1);
+}
 
 
