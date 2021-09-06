@@ -141,6 +141,7 @@ let logo = document.querySelector("#topPanel span.logo img");
 
 document.addEventListener("DOMContentLoaded", function() {
     if (document.querySelector('body').classList.contains("darkmode--activated")) darkModeToggle();
+    window.scrollBy(0, 1);
 });
 
 darkThemeButton.addEventListener("click", function() {

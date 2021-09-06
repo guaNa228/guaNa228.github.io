@@ -516,7 +516,7 @@ header .bg {
   display: flex;
 }
 header .bg img {
-  max-height: 245px;
+  max-height: 230px;
 }
 header .bg img:not(:first-child) {
   margin-left: -10px;
