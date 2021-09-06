@@ -1030,67 +1030,99 @@ article#reasons_and_prices {
             }
             .reasonsGrid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(5, 1fr);
                 gap: 70px 80px;
                 @media screen and (max-width: 900px) {
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-columns: repeat(4, 1fr);
                 }
-                @media screen and (max-width: 530px) {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(1, 1fr);
+                @media screen and (max-width: 630px) {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 30px 60px;
                 }
                 .reason {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     div.logo_wrapper {
-                        width: 120px;
+                        width: 100%;
                         height: 120px;
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        margin-bottom: 25px;
+                        position: relative;
+                        @media screen and (min-width: 1100px) {
+                            width: 145px;
+                            &.expanded {
+                                width: 200px;
+                            }
+                        }
+                        @media screen and (min-width: 730px) and (max-width: 900px) {
+                            width: 90px;
+                            &.expanded {
+                                width: 120%;
+                            }
+                        }
                         img {
-                            width: 300%;
+                            width: 100%;
                             object-fit: cover;
+                            
                         }
                         &.expanded {
-                            width: 250px;
-                            @media screen and (max-width: 770px) {
-                                width: 220px;
+                            width: 150%;
+                            @media screen and (max-width: 730px) {
+                                width: 120%;
+                            }
+                        }
+                        &.not_changable::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 140px;
+                            height: 140px;
+                            border-radius: 50%;
+                            background: #0AACFC;
+                            @media screen and (max-width: 1110px) {
+                                width: 120px;
+                                height: 120px;
+                            }@media screen and (max-width: 530px) {
+                                width: 80px;
+                                height: 80px;
                             }
                         }
                     }
-                    h3 {
-                        font-family: Poppins-SemiBold;
-                        color: @DarkBlue;
-                        font-size: 20px;
-                        margin-bottom: 15px;
-                    }
-                    p {
-                        font-size: 18px;
-                        color: @Gray;
-                        line-height: 26px;
-                        font-family: Poppins;
-                    }
-                    div.sources {
-                        margin-top: 15px;
-                        width: 90%;
-                        height: auto;
-                        display: flex;
-                        justify-content: space-around;
-                        a {
-                            svg {
-                                width: 36px;
-                                height: 36px;
-                                fill: #616368;
-                                transition: .5s;
-                                &:hover {
-                                    fill: #0AACFC;
-
+                    .info {
+                        display: none;
+                        h3 {
+                            font-family: Poppins-SemiBold;
+                            color: @DarkBlue;
+                            font-size: 20px;
+                            margin-bottom: 15px;
+                        }
+                        p {
+                            font-size: 18px;
+                            color: @Gray;
+                            line-height: 26px;
+                            font-family: Poppins;
+                        }
+                        div.sources {
+                            margin-top: 15px;
+                            width: 90%;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-around;
+                            a {
+                                svg {
+                                    width: 36px;
+                                    height: 36px;
+                                    fill: #616368;
+                                    transition: .5s;
+                                    &:hover {
+                                        fill: #0AACFC;
+                                    }
                                 }
                             }
                         }
@@ -1476,393 +1508,6 @@ article#reasons_and_prices {
     }
 }
 
-article#clients_and_faq {
-    padding-top: 150px;
-    section#clients {
-        margin-bottom: 80px;
-        .wrapper {
-            max-width: 1350px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            
-            
-            .map {
-                position: relative;
-                flex-basis: 55%;
-                @media screen and (max-width: 755px) {
-                    display: none;
-                }
-                @media screen and (max-width: 1050px) {
-                    margin-left: -10%;
-                    flex-basis: 70%;
-                    transform: rotate(-90deg);
-                }
-                img.main {
-                    display: block;
-                    width: 100%;
-                    z-index: 0;
-                    height: 100%;
-                }
-                img:not(:first-child) {
-                    z-index: 1;
-                    position: absolute;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    @media screen and (max-width: 1050px) {
-                        transform: rotate(90deg);
-                    }
-                    
-                }
-                img:nth-child(2) {
-                    top: 20%;
-                    left: 13%;
-                    width: 8.08%;
-                    height: 12.92%;
-                }
-                img:nth-child(3) {
-                    top: 2%;
-                    left: 40%;
-                    width: 9.42%;
-                    height: 15.08%;
-                }
-                img:nth-child(4) {
-                    top: 45%;
-                    left: 15%;
-                    width: 13.46%;
-                    height: 21.54%;
-                }
-                img:nth-child(5) {
-                    top: 30%;
-                    left: 40%;
-                    width: 14.81%;
-                    height: 23.7%;
-                }
-                img:nth-child(6) {
-                    top: 70%;
-                    left: 34%;
-                    width: 17.5%;
-                    height: 28.01%;
-                }
-                img:nth-child(7) {
-                    top: 49%;
-                    left: 61%;
-                    width: 10.77%;
-                    height: 17.24%;
-                }
-                img:nth-child(8) {
-                    top: 12%;
-                    left: 75%;
-                    width: 7.4%;
-                    height: 11.8%;
-                }
-            }
-            .info {
-                flex-basis: 45%;
-                margin-right: 5px;
-                @media screen and (max-width: 755px) {
-                    flex-basis: 100%;
-                    margin-left: 15px;
-                    margin-right: 15px;
-                }
-                @media screen and (max-width: 1050px) and (min-width:756px) {
-                    flex-basis: 55%;
-                    margin-left: -10%;
-                }
-                h2 {
-                    max-width: 490px;
-                    font-size: 40px;
-                    line-height: 50px;
-                    font-family: Poppins-SemiBold;
-                    color: @DarkBlue;
-                    margin-bottom: 25px;
-                }
-                p {
-                    font-family: Poppins;
-                    font-size: 16px;
-                    line-height: 26px;
-                    color: @Gray;
-                }
-                .slider {
-                    width: 100%;
-                    height: 550px;
-                    position: relative;
-                    margin-top: 40px;
-                    overflow: hidden;
-                    .slider_item {
-                        width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        transition: .3s;
-                        .rating {
-                            margin-bottom: 30px;
-                            svg {
-                                width: 20px;
-                                height: 20px;
-                                &.done {
-                                    fill: #ffcc00;
-                                }
-                            }
-                        }
-                        p.theme {
-                            font-size: 20px;
-                            font-family: Poppins-SemiBold;
-                            color: @DarkBlue;
-                            margin-bottom: 20px;
-                        }
-                        p.review {
-                            font-family: Poppins;
-                            font-size: 16px;
-                            line-height: 26px;
-                            color: @Gray;
-                            margin-bottom: 60px;
-                        }
-                        div.footer {
-                            width: 100%;
-                            height: 90px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            .author {
-                                display: flex;
-                                align-items: center;
-                                img {
-                                    width: 90px;
-                                    height: 90px;
-                                    object-fit: cover;
-                                    border-radius: 50%;
-                                    margin-right: 30px;
-                                }
-                                .name_post {
-                                    h6 {
-                                        font-size: 18px;
-                                        color: @DarkBlue;
-                                        font-family: Poppins-SemiBold;
-                                    }
-                                    p {
-                                        margin: 0;
-                                    }
-                                }
-                            }
-                            .controls {
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                span {
-                                    width: 1px;
-                                    height: 26px;
-                                    background: #e7e7e7;
-                                }
-                                div {
-                                    z-index: 1;
-                                    box-sizing: border-box;
-                                    width: 50px;
-                                    height: 50px;
-                                    cursor: pointer;
-                                    position: relative;
-                                    border-radius: 50%;
-                                    background: #dee1e6;
-                                    &.deactivated {
-                                        cursor:default;
-                                        border: 2px solid #dee1e6;
-                                        background: none;
-                                        svg {
-                                            fill: #dee1e6;
-                                        }
-                                    }
-                                    &.backward {
-                                        margin-right: 10px;
-                                    }
-                                    &.forward {
-                                        margin-left: 10px;
-                                    }
-                                    svg {
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%, -50%);
-                                        width: 15px;
-                                        height: 50px;
-                                        fill: #2500f9;
-                                    }
-                                    &:not(.deactivated)::after {
-                                        z-index: 0;
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%, -50%);
-                                        content: '';
-                                        width: 50px;
-                                        height: 50px;
-                                        border-radius: 50%;
-                                    }
-                                    &:hover {
-                                        &:not(.deactivated)::after {
-                                            animation: circleSpawn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        &:nth-child(2) {
-                            left: 100%;
-                            visibility: hidden;
-                        }
-                        &:nth-child(3) {
-                            left: 200%;
-                            visibility: hidden;
-                        }
-                        &:nth-child(4) {
-                            left: 300%;
-                            visibility: hidden;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    section#faq {
-        padding-bottom: 100px;
-        border-bottom: 2px solid #f4f4f4;
-        .wrapper {
-            max-width: 970px;
-            margin: 0 auto;
-            padding: 0px 15px;
-            h1 {
-                text-align: center;
-                font-size: 40px;
-                font-family: Poppins-SemiBold;
-                color: @DarkBlue;
-                margin-bottom: 40px;
-            }
-            p.main {
-                margin: 0 auto;
-                max-width: 640px;
-                text-align: center;
-                font-size: 16px;
-                line-height: 26px;
-                color: @Gray;
-                font-family: Poppins;
-                margin-bottom: 70px;
-            }
-            .faq_accordion {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                .accordion_item {
-                    background: #f5f7fa;
-                    padding: 23px 46px;
-                    text-align: left;
-                    margin-bottom: 10px;
-                    position: relative;
-                    transition: 1s;
-                    &.opened {
-                        svg {
-                            display: none;
-                        }
-                        p {
-                            margin-top: 40px;
-                            display: block;
-                            height: auto;
-                        }
-                    }
-                    }
-                    h5 {
-                        font-size: 20px;
-                        font-family: Poppins-SemiBold;
-                        color: @DarkBlue;
-                        
-                    }
-                    p {
-                        overflow: hidden;
-                        transition: 1s;
-                        display: none;
-                        height: 0;
-                        margin-top: 0;
-                        font-family: Poppins;
-                        font-size: 16px;
-                        line-height: 26px;
-                        color: @Gray;
-                    }
-                    svg {
-                        cursor: pointer;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 17px;
-                        height: 17px;
-                        fill: @DarkBlue;
-                        right: 35px;
-                        @media screen and (max-width: 600px) {
-                            right: 15px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    section#download {
-        display: flex;
-        justify-content: flex-end;
-        @media screen and (max-width: 1400px) {
-            justify-content: flex-start;
-            margin-left: 30px;
-        }
-        .wrapper {
-            flex-basis: 1385px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            .info {
-                flex-basis: 50%;
-                h1 {
-                    font-size: 48px;
-                    font-family: Poppins-SemiBold;
-                    color: @DarkBlue;
-                    margin-bottom: 40px; 
-                }
-                p {
-                    font-size: 16px;
-                    line-height: 26px;
-                    font-family: Poppins;
-                    color: @Gray;
-                    margin-bottom: 40px;
-                }
-                .download {
-                    display: flex;
-                    max-width: 430px;
-                    justify-content: space-around;
-                    flex-wrap: wrap;
-                    @media screen and (max-width: 1350px) {
-                        justify-content: flex-start;
-                    }
-                    img {
-                        transition: .5s;
-                        cursor: pointer;
-                        width: 190px;
-                        margin-right: 5px;
-                        &:hover {
-                            transform: translateY(-10px);
-                        }
-                        @media screen and (max-width: 1350px) {
-                            margin-bottom: 20px;
-                        }
-                    }
-                }
-            }
-            .img {
-                flex-basis: 50%;
-                height: 100%;
-                img {
-                    object-fit: cover;
-                    height: 114.7%;
-                }
-            }
-        }
-    }
-
 footer {
     padding-top: 70px;
     padding-bottom: 75px;
@@ -1943,10 +1588,3 @@ html body.darkmode--activated footer {
         }
     }
 
-html body.darkmode--activated main article#reasons_and_prices section#why_choose_app div.wrapper div.reasonsGrid div.reason div.logo_wrapper.not_changable {
-    background: #f55303;
-}
-
-html body main article#reasons_and_prices section#why_choose_app div.wrapper div.reasonsGrid div.reason div.logo_wrapper.not_changable {
-    background: #0AACFC;
-}
