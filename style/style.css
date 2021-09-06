@@ -216,8 +216,11 @@ header.dark {
 header.dark .wrapper {
   background: #000;
 }
-header.dark .wrapper #topPanel nav a {
+header.dark .wrapper #topPanel nav a.nav_link {
   color: #f6ebd1;
+}
+header.dark .wrapper #topPanel nav a.nav_link:hover {
+  color: #f55303;
 }
 header.dark .wrapper #topPanel svg.icon-menu {
   fill: #f6ebd1;
