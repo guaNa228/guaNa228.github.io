@@ -186,4 +186,3 @@ function logoChange() {
     else logo.src = logo.src.replace("logo.svg", "/dark/logo.svg", 1);
 }
 
-

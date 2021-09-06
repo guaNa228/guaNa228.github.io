@@ -47,6 +47,22 @@ h1 {
 
 /* Timeline */
 
+body.darkmode--activated {
+  div.temiline {
+    li.event {
+      span {
+        color: #9e9c97;
+      }
+      span::selection {
+        color: black;
+        background: #f55303;
+      }
+    }
+  }
+}
+
+
+
 .timeline {
   border-left: @line solid @color-primary;
   border-bottom-right-radius: @radius;
@@ -63,7 +79,7 @@ h1 {
   list-style: none;
   text-align: left;  
   font-weight: 100;  
-  max-width: 100%; 
+  max-width: 100%;
   
  p {
      color: #616368;

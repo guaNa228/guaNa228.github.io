@@ -246,6 +246,10 @@ header {
                 nav {
                     a.nav_link {
                         color: #f6ebd1;
+                        &::selection {
+                            background: #f55303;
+                            color: black;
+                        }
                         &:hover {
                             color: #f55303;
                         }
@@ -259,14 +263,25 @@ header {
                 #content {
                     h1 {
                         color: #dbd0ae;
+                        &::selection {
+                            background: #f55303;
+                            color: black;
+                        }
                     }
                     p {
                         color: #9e9c97;
+                        &::selection {
+                            background: #f55303;
+                            color: black;
+                        }
                     }
                     .btns {
                         a.try_for_free_btn {
                             background: #daff06;
                             color: #000;
+                            &::selection {
+                                background: #f55303;
+                            }
                             &:hover {
                                 background: #e5ff52;
                             }

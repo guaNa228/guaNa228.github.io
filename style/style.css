@@ -219,6 +219,10 @@ header.dark .wrapper {
 header.dark .wrapper #topPanel nav a.nav_link {
   color: #f6ebd1;
 }
+header.dark .wrapper #topPanel nav a.nav_link::selection {
+  background: #f55303;
+  color: black;
+}
 header.dark .wrapper #topPanel nav a.nav_link:hover {
   color: #f55303;
 }
@@ -228,12 +232,23 @@ header.dark .wrapper #topPanel svg.icon-menu {
 header.dark .wrapper #main #content h1 {
   color: #dbd0ae;
 }
+header.dark .wrapper #main #content h1::selection {
+  background: #f55303;
+  color: black;
+}
 header.dark .wrapper #main #content p {
   color: #9e9c97;
+}
+header.dark .wrapper #main #content p::selection {
+  background: #f55303;
+  color: black;
 }
 header.dark .wrapper #main #content .btns a.try_for_free_btn {
   background: #daff06;
   color: #000;
+}
+header.dark .wrapper #main #content .btns a.try_for_free_btn::selection {
+  background: #f55303;
 }
 header.dark .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #e5ff52;

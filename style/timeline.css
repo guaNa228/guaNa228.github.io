@@ -171,6 +171,13 @@ h1 {
   text-align: center;
 }
 /* Timeline */
+body.darkmode--activated div.temiline li.event span {
+  color: #9e9c97;
+}
+body.darkmode--activated div.temiline li.event span::selection {
+  color: black;
+  background: #f55303;
+}
 .timeline {
   border-left: 4px solid #004ffc;
   border-bottom-right-radius: 4px;
