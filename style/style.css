@@ -285,7 +285,7 @@ header .wrapper #topPanel nav a {
   color: #242f51;
   transition: color 0.3s;
 }
-header .wrapper #topPanel nav a:not(:last-child):hover {
+header .wrapper #topPanel nav a:hover {
   color: blue;
 }
 header .wrapper #topPanel nav a.try_for_free_btn {
@@ -1853,21 +1853,21 @@ footer nav a {
   flex-basis: 150px;
   height: 40px;
   line-height: 40px;
-  transition: transform 0.5s;
+  transition: 0.5s;
   display: inline-block;
   color: white;
   font-size: 16px;
   font-family: Poppins;
   text-decoration: none;
 }
-footer nav a:hover {
-  transform: translateY(-10px);
-}
 @media screen and (max-width: 430px) {
   footer nav a {
     font-size: 14px;
     margin: 0 5px;
   }
+}
+footer nav a:hover {
+  color: #f55303;
 }
 footer nav.social {
   margin-top: 30px;
@@ -1896,4 +1896,7 @@ footer p {
   color: white;
   font-family: Poppins;
   font-size: 14px;
+}
+html body.darkmode--activated footer nav a:hover {
+  color: #f55303;
 }

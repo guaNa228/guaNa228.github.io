@@ -149,10 +149,11 @@ darkThemeButton.addEventListener("click", function() {
 });
 
 function darkModeToggle() {
+    changeHeaderBackgrounds();
     darkThemeButtonChange();
     logoChange();
     changePartnersLogos();
-    changeHeaderBackgrounds();
+    
     header.classList.toggle("dark");
 }
 

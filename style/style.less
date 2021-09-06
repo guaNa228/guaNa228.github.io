@@ -319,7 +319,7 @@ header {
                     text-decoration: none;
                     color: @DarkBlue;
                     transition: color .3s;
-                    &:not(:last-child):hover {
+                    &:hover {
                         color: blue;
                     }
                 }
@@ -1868,18 +1868,18 @@ footer {
             flex-basis: 150px;
             height: 40px;
             line-height: 40px;
-            transition: transform .5s;
+            transition: .5s;
             display: inline-block;
             color: white;
             font-size: 16px;
             font-family: Poppins;
             text-decoration: none;
-            &:hover {
-                transform: translateY(-10px);
-            }
             @media screen and (max-width: 430px) {
                 font-size: 14px;
                 margin: 0 5px;
+            }
+            &:hover {
+                color: #f55303;
             }
         }
     }
@@ -1913,13 +1913,12 @@ footer {
 
     }
 }
-
-body.darkmode--activated {
-    footer {
+html body.darkmode--activated footer {
         nav {
             a {
-                
+                &:hover {
+                    color: #f55303;
+                }
             }
         }
     }
-}
