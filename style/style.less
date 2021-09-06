@@ -43,6 +43,9 @@
 
 img {
     pointer-events: none;
+    &::selection {
+        background: transparent;
+    }
 }
 
 html {
@@ -280,7 +283,7 @@ header {
                             background: #daff06;
                             color: #000;
                             &::selection {
-                                background: #f55303;
+                                background: transparent;
                             }
                             &:hover {
                                 background: #e5ff52;
@@ -354,6 +357,7 @@ header {
                     &:hover {
                         background: darken(@Blue, 15%);
                     }
+                    
                     
                 }
             }
@@ -523,6 +527,7 @@ header {
                         &:hover {
                             background: darken(@Blue, 15%);
                         }
+                        
                         svg {
                             width: 30px;
                             height: 30px;
@@ -900,7 +905,7 @@ article#features_and_companies {
                             color:@LightBlue;
                         }
                         .logo {
-                            background-color: #f4f4ff;
+                            background-color: lighten(#f4f4ff, 40%);
                             color: @LightBlue;
                         }
                         
@@ -1937,3 +1942,11 @@ html body.darkmode--activated footer {
             }
         }
     }
+
+html body.darkmode--activated main article#reasons_and_prices section#why_choose_app div.wrapper div.reasonsGrid div.reason div.logo_wrapper.not_changable {
+    background: #f55303;
+}
+
+html body main article#reasons_and_prices section#why_choose_app div.wrapper div.reasonsGrid div.reason div.logo_wrapper.not_changable {
+    background: #0AACFC;
+}
