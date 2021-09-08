@@ -87,6 +87,40 @@ div.try_for_free_btn a {
     position: absolute;
   }
 }
+@keyframes shining {
+  0% {
+    -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+  }
+  50% {
+    -webkit-box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+    -moz-box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+    box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+  }
+  100% {
+    -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+  }
+}
+@keyframes shiningSmall {
+  0% {
+    -webkit-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    -moz-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+  }
+  50% {
+    -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+    -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+    box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+  }
+  100% {
+    -webkit-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    -moz-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+  }
+}
 @keyframes circleSpawn {
   0% {
     border: 2px solid #2500f9;
@@ -969,7 +1003,7 @@ article#reasons_and_prices {
 }
 article#reasons_and_prices section#why_choose_app {
   width: 100%;
-  margin-bottom: 190px;
+  margin-bottom: 140px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper {
   margin: 0 auto;
@@ -1023,6 +1057,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
   width: 100%;
@@ -1080,6 +1115,31 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
 }
 @media screen and (max-width: 530px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable::before {
+    width: 80px;
+    height: 80px;
+  }
+}
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated {
+  background: transparent;
+  animation: shining 2.5s infinite;
+}
+@media screen and (max-width: 1110px) {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated {
+    width: 120px;
+    height: 120px;
+  }
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 530px) {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated {
+    width: 80px;
+    height: 80px;
+    animation: shiningSmall 2.5s infinite;
+  }
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated img {
     width: 80px;
     height: 80px;
   }

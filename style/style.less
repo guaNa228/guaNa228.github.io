@@ -105,6 +105,42 @@ div.try_for_free_btn {
     }
 }
 
+@keyframes shining {
+    0% {
+        -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+        -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+        box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    }
+    50% {
+        -webkit-box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+        -moz-box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+        box-shadow: -2px 0px 66px 36px rgba(37, 0, 249, 0.6);
+    }
+    100% {
+        -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+        -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+        box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.35);
+    }
+}
+
+@keyframes shiningSmall {
+    0% {
+        -webkit-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+        -moz-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+        box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    }
+    50% {
+        -webkit-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+        -moz-box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+        box-shadow: -2px 0px 66px 18px rgba(37, 0, 249, 0.6);
+    }
+    100% {
+        -webkit-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+        -moz-box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+        box-shadow: -2px 0px 66px 9px rgba(37, 0, 249, 0.35);
+    }
+}
+
 @keyframes circleSpawn {
     0% {
         border: 2px solid @Blue;
@@ -999,7 +1035,7 @@ article#reasons_and_prices {
     border-bottom: 2px solid #f4f4f4;
     section#why_choose_app {
         width: 100%;
-        margin-bottom: 190px;
+        margin-bottom: 140px;
         .wrapper {
             margin: 0 auto;
             max-width: 1170px;
@@ -1044,6 +1080,7 @@ article#reasons_and_prices {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                     div.logo_wrapper {
                         width: 100%;
                         height: 120px;
@@ -1067,7 +1104,6 @@ article#reasons_and_prices {
                         img {
                             width: 100%;
                             object-fit: cover;
-                            
                         }
                         &.expanded {
                             width: 150%;
@@ -1088,9 +1124,31 @@ article#reasons_and_prices {
                             @media screen and (max-width: 1110px) {
                                 width: 120px;
                                 height: 120px;
-                            }@media screen and (max-width: 530px) {
+                            }
+                            @media screen and (max-width: 530px) {
                                 width: 80px;
                                 height: 80px;
+                            }
+                        }
+                        &.animated {
+                            background: transparent;
+                            animation: shining 2.5s infinite;
+                            @media screen and (max-width: 1110px) {
+                                width: 120px;
+                                height: 120px;
+                                img {
+                                    width: 120px;
+                                    height: 120px;
+                                }
+                            }
+                            @media screen and (max-width: 530px) {
+                                width: 80px;
+                                height: 80px;
+                                img {
+                                    width: 80px;
+                                    height: 80px;
+                                }
+                                animation: shiningSmall 2.5s infinite;
                             }
                         }
                     }
@@ -1578,6 +1636,9 @@ footer {
 
     }
 }
+
+//dark theme preferences
+
 html body.darkmode--activated footer {
         nav {
             a {
