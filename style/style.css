@@ -214,7 +214,7 @@ svg.icon-cancel {
   cursor: pointer;
   transition: 0.5s;
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 1150px;
   right: 11.3%;
   width: 20px;
@@ -240,6 +240,129 @@ svg.icon-cancel.active {
   width: 100%;
   height: 100%;
   background-color: white;
+}
+.partner_card_wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 100vw;
+  z-index: 10;
+  background: transparent;
+  transition: 0.5s;
+}
+.partner_card_wrapper.active {
+  background: rgba(36, 47, 81, 0.7);
+  left: 0;
+}
+.partner_card_wrapper.active .partner_card {
+  top: 50%;
+  transition-delay: 0.5s;
+}
+.partner_card_wrapper .partner_card {
+  transition: 0.5s;
+  width: 35%;
+  display: inline-flex;
+  flex-direction: column;
+  position: fixed;
+  top: -500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 0;
+}
+@media screen and (max-width: 1200px) {
+  .partner_card_wrapper .partner_card {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .partner_card_wrapper .partner_card {
+    padding: 20px 20px;
+    width: 80%;
+  }
+}
+.partner_card_wrapper .partner_card img {
+  margin: 0 auto 30px;
+  width: 20%;
+}
+.partner_card_wrapper .partner_card img.expanded {
+  width: 50%;
+}
+.partner_card_wrapper .partner_card h3 {
+  text-align: center;
+  font-family: Poppins-SemiBold;
+  color: #242f51;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.partner_card_wrapper .partner_card p {
+  text-align: center;
+  font-size: 18px;
+  color: #616368;
+  line-height: 26px;
+  font-family: Poppins;
+}
+.partner_card_wrapper .partner_card div.sources {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.partner_card_wrapper .partner_card div.sources a svg {
+  width: 36px;
+  height: 36px;
+  fill: #616368;
+  transition: 0.5s;
+}
+.partner_card_wrapper .partner_card div.sources a svg:hover {
+  fill: #0AACFC;
+}
+.partner_card_wrapper .partner_card svg.icon-cancel {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  fill: #616368;
+  transition: 0.5s;
+}
+.partner_card_wrapper .partner_card svg.icon-cancel:hover {
+  fill: #242f51;
+}
+@media screen and (max-width: 530px) {
+  .partner_card_wrapper .partner_card svg.icon-cancel {
+    width: 20px;
+    height: 20px;
+  }
+}
+html body.darkmode--activated .partner_card_wrapper.active {
+  background: rgba(245, 83, 3, 0.7);
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card {
+  background: #000;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card h3 {
+  color: #dbd0ae;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card p {
+  color: #9e9c97;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card .sources svg {
+  fill: #9e9c97;
+  transition: 0.5s;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card .sources svg:hover {
+  fill: #f55303;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card svg.icon-cancel {
+  fill: #9e9c97;
+}
+html body.darkmode--activated .partner_card_wrapper .partner_card svg.icon-cancel:hover {
+  fill: #dbd0ae;
 }
 /* Header */
 header {
@@ -1037,6 +1160,7 @@ article#reasons_and_prices section#why_choose_app .wrapper h5 {
   margin-bottom: 85px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
+  padding: 0px 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 70px 80px;
@@ -1046,10 +1170,16 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 670px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px 60px;
+    gap: 60px 80px;
+  }
+}
+@media screen and (max-width: 530px) {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 40px;
   }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason {
@@ -1067,6 +1197,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (min-width: 1100px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
@@ -1081,20 +1212,24 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
     width: 90px;
   }
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-    width: 120%;
+    width: 170%;
   }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper img {
   width: 100%;
   object-fit: cover;
+  pointer-events: auto;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-  width: 150%;
+  width: 140%;
 }
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 800px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-    width: 120%;
+    width: 140%;
   }
+}
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable img {
+  width: 50%;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable::before {
   content: "";
@@ -1120,7 +1255,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated {
-  background: transparent;
+  background: black;
   animation: shining 2.5s infinite;
 }
 @media screen and (max-width: 1110px) {
@@ -1168,7 +1303,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info div.sources a svg {
   width: 36px;
-  height: 36px;
+  height: 37px;
   fill: #616368;
   transition: 0.5s;
 }

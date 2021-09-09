@@ -4,6 +4,8 @@ let clicksDone = false;
 
 let counterDone = false;
 
+let partnerInfoOpened = false;
+
 //clients review slider
 
 let sliderNextBtn = document.querySelectorAll(".controls .forward");
@@ -46,7 +48,7 @@ let mobileMenu = document.querySelector(".mobile_menu");
 let mobileNav = document.querySelector("nav.mobile");
 let animBlock = document.querySelector(".animBlock");
 let animBlockWrapper = document.querySelector(".animBlockWrapper");
-let closeMenuBtn = document.querySelector("svg.icon-cancel");
+let closeMenuBtn = document.querySelector("svg.icon-cancel.men");
 
 let mobileMenuLinks = document.querySelectorAll("nav.mobile a");
 
@@ -186,4 +188,56 @@ function logoChange() {
     if (header.classList.contains("dark")) logo.src = logo.src.replace("/dark/logo.svg", "logo.svg", 1);
     else logo.src = logo.src.replace("logo.svg", "/dark/logo.svg", 1);
 }
+
+
+//partnerClick
+
+let partnerLogos = document.querySelectorAll(".logo_wrapper");
+let partnerCard = document.querySelector(".partner_card");
+let partnerCardWrapper = document.querySelector(".partner_card_wrapper");
+let HTML = document.querySelector("html");
+let partnerCardCloseButton = document.querySelector("html body div.partner_card_wrapper div.partner_card svg.icon-cancel");
+
+console.log(partnerCardCloseButton);
+
+partnerCard.onclick = function(event) {
+    event.stopPropagation();
+}
+
+partnerLogos.forEach((item) => {
+    item.addEventListener("click", openPartnerInfo);
+});
+
+partnerCardWrapper.addEventListener("click", closePartnerInfoCard);
+
+
+
+
+function openPartnerInfo(e) {
+    partnerCard.innerHTML = this.innerHTML+this.parentElement.lastElementChild.innerHTML+'<svg class="icon-cancel"><use xlink:href="symbol-defs.svg#icon-cancel"></use></svg>';
+    partnerCardCloseButtonUpdate();
+
+    if (this.classList.contains("expanded")) partnerCard.firstElementChild.classList.add("expanded");
+    else partnerCard.firstElementChild.classList.remove("expanded");
+
+    partnerCard.parentElement.classList.add("active");
+    HTML.style.overflowY = "hidden";
+
+    if(partnerInfoOpened==false) document.querySelector(".logo_wrapper.animated").classList.remove("animated");
+}
+
+function closePartnerInfoCard() {
+    console.log(1);
+    partnerCardWrapper.classList.remove("active");
+    HTML.style.overflowY = "scroll";
+}
+
+function partnerCardCloseButtonUpdate() {
+    partnerCardCloseButton = document.querySelector("html body div.partner_card_wrapper div.partner_card svg.icon-cancel");
+    partnerCardCloseButton.addEventListener("click", closePartnerInfoCard);
+}
+
+
+
+
 
