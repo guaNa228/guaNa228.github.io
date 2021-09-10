@@ -192,6 +192,7 @@ nav.mobile a {
   font-size: 19px;
   height: 25px;
   overflow: hidden;
+  transition: 0.5s;
 }
 nav.mobile a::after {
   transition: 0.5s;
@@ -203,6 +204,9 @@ nav.mobile a::after {
   width: 100%;
   height: 100%;
   background: white;
+}
+nav.mobile a:hover {
+  color: #f55303;
 }
 nav.mobile.active {
   z-index: 5;
@@ -329,6 +333,7 @@ svg.icon-cancel.men.active {
   z-index: 10;
   fill: #616368;
   transition: 0.5s;
+  cursor: pointer;
 }
 .partner_card_wrapper .partner_card svg.icon-cancel:hover {
   fill: #242f51;

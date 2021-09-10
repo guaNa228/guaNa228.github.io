@@ -215,6 +215,7 @@ nav.mobile {
         font-size: 19px;
         height: 25px;
         overflow:hidden;
+        transition: .5s;
         &::after {
             transition: .5s;
             transition-timing-function: cubic-bezier(0,0,0.58,1);
@@ -225,6 +226,9 @@ nav.mobile {
             width: 100%;
             height: 100%;
             background: white;
+        }
+        &:hover {
+            color: #f55303;
         }
     }
     &.active {
@@ -354,6 +358,7 @@ svg.icon-cancel.men {
             z-index: 10;
             fill: #616368;
             transition: .5s;
+            cursor: pointer;
             &:hover {
                 fill: #242f51;
             }

@@ -54,6 +54,7 @@ let mobileMenuLinks = document.querySelectorAll("nav.mobile a");
 
 
 mobileMenuOpenButton.onclick = function() {
+    HTML.style.overflowY = "hidden";
     mobileMenu.style.display = "flex";
     setTimeout(() => {
         mobileMenu.classList.add("active");
@@ -76,6 +77,7 @@ closeMenuBtn.onclick = function() {
     mobileMenu.classList.remove("active");
     mobileNav.classList.remove("active");
     closeMenuBtn.classList.remove("active");
+    HTML.style.overflowY = "scroll";
     scrollAllow();
     setTimeout(() => {
         mobileMenu.style.display = "none";
@@ -85,6 +87,7 @@ closeMenuBtn.onclick = function() {
 mobileMenuLinks.forEach((item) => {
     item.onclick = function() {
         setTimeout(() => {
+            scrollAllow();
             mobileMenu.classList.remove("active");
             mobileMenu.style.position = "absolute";
             mobileNav.classList.remove("active");
