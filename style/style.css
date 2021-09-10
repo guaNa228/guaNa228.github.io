@@ -220,7 +220,7 @@ svg.icon-cancel.men {
   z-index: -1;
   position: fixed;
   top: 1150px;
-  right: 11.3%;
+  right: 15vw;
   width: 20px;
   height: 20px;
   fill: white;
@@ -408,18 +408,11 @@ header.dark .wrapper #main #content p::selection {
   background: #f55303;
   color: black;
 }
-header.dark .wrapper #main #content .btns a.try_for_free_btn {
-  background: #daff06;
-  color: #000;
-}
 header.dark .wrapper #main #content .btns a.try_for_free_btn::selection {
   background: transparent;
 }
 header.dark .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #e5ff52;
-}
-header.dark .wrapper #main #content .btns a.try_for_free_btn svg {
-  fill: #000;
 }
 header .wrapper {
   max-width: 77%;
@@ -505,12 +498,12 @@ header .wrapper .mobile_menu {
 @media screen and (max-width: 1100px) {
   header .wrapper .mobile_menu.active {
     position: absolute;
-    top: -300px;
-    right: -300px;
+    top: -50vh;
+    right: -50vw;
     z-index: 2;
     background: #09142e;
-    width: 1500px;
-    height: 1500px;
+    width: 160vw;
+    height: 220vh;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -1169,6 +1162,8 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 70px 80px;
+  align-content: center;
+  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
@@ -1193,6 +1188,8 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
   width: 100%;

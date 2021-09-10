@@ -181,9 +181,6 @@ function changeHeaderBackgrounds() {
         if (header.classList.contains("dark")) item.src = item.src.replace("/dark/Layer5.svg", "/Layer5.svg", 1);
         else item.src = item.src.replace("/Layer5.svg", "/dark/Layer5.svg", 1);
     });
-
-    if (header.classList.contains("dark")) extenededBg.src = extenededBg.src.replace("/dark/bg.svg", "bg.svg", 1);
-    else extenededBg.src = extenededBg.src.replace("bg.svg", "/dark/bg.svg", 1);
 }
 
 function darkThemeButtonChange() {
@@ -252,14 +249,6 @@ function partnerCardCloseButtonUpdate() {
 function partnerInfoImgUpdate() {
     partnerInfoImg = document.querySelector(".partner_card img");
 }
-
-function preventDefault(e) {
-    console.log(1);
-    e = e || window.event;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;  
-  }
 
 function scrollBan() {
     if (window.addEventListener) // older FF
