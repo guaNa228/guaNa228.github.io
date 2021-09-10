@@ -143,6 +143,7 @@ let header = document.querySelector("header");
 const darkmode =  new Darkmode();
 let extenededBg = document.querySelector(".bg_extended img");
 let logo = document.querySelector("#topPanel span.logo img");
+let partnerInfoImg = document.querySelector(".partner_card img");
 
 document.addEventListener("DOMContentLoaded", function() {
     if (document.querySelector('body').classList.contains("darkmode--activated")) darkModeToggle();
@@ -168,6 +169,11 @@ function changePartnersLogos() {
         if (header.classList.contains("dark")) item.src = item.src.replace("/svg_dark", "/svg", 1);
         else item.src = item.src.replace("/svg", "/svg_dark", 1);
     });
+
+    if (partnerCard.firstElementChild.classList.contains("changeable")) {
+        if (header.classList.contains("dark")) partnerCard.querySelector("img").src = partnerCard.querySelector("img").src.replace("/svg_dark", "/svg", 1);
+        else partnerCard.querySelector("img").src = partnerCard.querySelector("img").src.replace("/svg", "/svg_dark", 1);
+    }
 }
 
 function changeHeaderBackgrounds() {
@@ -223,6 +229,9 @@ function openPartnerInfo(e) {
     if (this.classList.contains("expanded")) partnerCard.firstElementChild.classList.add("expanded");
     else partnerCard.firstElementChild.classList.remove("expanded");
 
+    if (this.classList.contains("changeable")) partnerCard.firstElementChild.classList.add("changeable");
+    else partnerCard.firstElementChild.classList.remove("changeable");
+
     partnerCard.parentElement.classList.add("active");
     scrollBan();
 
@@ -240,6 +249,9 @@ function partnerCardCloseButtonUpdate() {
     partnerCardCloseButton.addEventListener("click", closePartnerInfoCard);
 }
 
+function partnerInfoImgUpdate() {
+    partnerInfoImg = document.querySelector(".partner_card img");
+}
 
 function preventDefault(e) {
     console.log(1);
