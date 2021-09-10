@@ -188,7 +188,7 @@ nav.mobile a {
   color: white;
   font-family: Poppins;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-size: 19px;
   height: 25px;
   overflow: hidden;
@@ -210,7 +210,7 @@ nav.mobile.active {
 nav.mobile.active a::after {
   left: 100%;
 }
-svg.icon-cancel {
+svg.icon-cancel.men {
   cursor: pointer;
   transition: 0.5s;
   z-index: -1;
@@ -221,7 +221,7 @@ svg.icon-cancel {
   height: 20px;
   fill: white;
 }
-svg.icon-cancel.active {
+svg.icon-cancel.men.active {
   z-index: 5;
   top: 50px;
 }

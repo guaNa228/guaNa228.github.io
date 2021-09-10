@@ -57,7 +57,7 @@ mobileMenuOpenButton.onclick = function() {
     mobileMenu.style.display = "flex";
     setTimeout(() => {
         mobileMenu.classList.add("active");
-        document.querySelector("html").style.overflowY = "hidden";
+        scrollBan();
     }, 10);
     
     setTimeout(() => {
@@ -76,7 +76,7 @@ closeMenuBtn.onclick = function() {
     mobileMenu.classList.remove("active");
     mobileNav.classList.remove("active");
     closeMenuBtn.classList.remove("active");
-    document.querySelector("html").style.overflowY = "scroll";
+    scrollAllow();
     setTimeout(() => {
         mobileMenu.style.display = "none";
     }, 500);
