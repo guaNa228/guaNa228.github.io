@@ -6,6 +6,8 @@ let counterDone = false;
 
 let partnerInfoOpened = false;
 
+let HTML = document.querySelector("html");
+
 //clients review slider
 
 let sliderNextBtn = document.querySelectorAll(".controls .forward");
@@ -223,5 +225,31 @@ function scrollAllow() {
     window.addEventListener('DOMMouseScroll', null, false);
 }
 
+function preventDefault(e) {
+    console.log(1);
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;  
+  }
 
+function scrollBan() {
+    if (window.addEventListener) // older FF
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
+    document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
+    window.onwheel = preventDefault; // modern standard
+    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+    window.ontouchmove  = preventDefault; // mobile
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
+}
+
+function scrollAllow() {
+    if (window.addEventListener) // older FF
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    document.removeEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
+    window.onwheel = null; // modern standard
+    window.onmousewheel = document.onmousewheel = null; // older browsers, IE
+    window.ontouchmove  = null; // mobile
+    window.addEventListener('DOMMouseScroll', null, false);
+}
 
