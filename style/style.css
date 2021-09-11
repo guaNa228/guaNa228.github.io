@@ -1159,37 +1159,38 @@ article#reasons_and_prices section#why_choose_app .wrapper h5 {
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
   padding: 0px 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 70px 80px;
+  display: flex;
+  width: 100%;
+  gap: 100px 70px;
   align-content: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 670px) {
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px 80px;
+    gap: 40px 80px;
   }
 }
 @media screen and (max-width: 530px) {
   article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px 40px;
+    flex-basis: 30%;
+    width: 100%;
+    gap: 40px 50px;
   }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason {
-  width: 100%;
+  flex-basis: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-self: center;
   align-self: center;
+}
+@media screen and (max-width: 800px) {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason {
+    flex-basis: 20%;
+  }
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
   width: 100%;
@@ -1200,37 +1201,28 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
   align-items: center;
   position: relative;
   cursor: pointer;
+  transition: 0.3s;
 }
-@media screen and (min-width: 1100px) {
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
-    width: 145px;
-  }
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-    width: 200px;
-  }
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper:hover {
+  transform: translateY(-20px);
 }
-@media screen and (min-width: 730px) and (max-width: 900px) {
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper {
-    width: 90px;
-  }
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-    width: 170%;
-  }
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper a {
+  display: block;
+  width: 100%;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper img {
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper a img {
   width: 100%;
   object-fit: cover;
   pointer-events: auto;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-  width: 140%;
+  width: 150%;
 }
-@media screen and (max-width: 800px) {
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.expanded {
-    width: 140%;
-  }
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable a {
+  display: block;
+  width: 100%;
 }
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable img {
+article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable a img {
   width: 50%;
 }
 article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.not_changable::before {
@@ -1265,7 +1257,7 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
     width: 120px;
     height: 120px;
   }
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated img {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated a img {
     width: 120px;
     height: 120px;
   }
@@ -1276,41 +1268,10 @@ article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason 
     height: 80px;
     animation: shiningSmall 2.5s infinite;
   }
-  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated img {
+  article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason div.logo_wrapper.animated a img {
     width: 80px;
     height: 80px;
   }
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info {
-  display: none;
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info h3 {
-  font-family: Poppins-SemiBold;
-  color: #242f51;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info p {
-  font-size: 18px;
-  color: #616368;
-  line-height: 26px;
-  font-family: Poppins;
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info div.sources {
-  margin-top: 15px;
-  width: 90%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info div.sources a svg {
-  width: 36px;
-  height: 37px;
-  fill: #616368;
-  transition: 0.5s;
-}
-article#reasons_and_prices section#why_choose_app .wrapper .reasonsGrid .reason .info div.sources a svg:hover {
-  fill: #0AACFC;
 }
 article#reasons_and_prices section#timy {
   width: 100%;

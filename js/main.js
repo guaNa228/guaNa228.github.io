@@ -169,11 +169,6 @@ function changePartnersLogos() {
         if (header.classList.contains("dark")) item.src = item.src.replace("/svg_dark", "/svg", 1);
         else item.src = item.src.replace("/svg", "/svg_dark", 1);
     });
-
-    if (partnerCard.firstElementChild.classList.contains("changeable")) {
-        if (header.classList.contains("dark")) partnerCard.querySelector("img").src = partnerCard.querySelector("img").src.replace("/svg_dark", "/svg", 1);
-        else partnerCard.querySelector("img").src = partnerCard.querySelector("img").src.replace("/svg", "/svg_dark", 1);
-    }
 }
 
 function changeHeaderBackgrounds() {
@@ -198,56 +193,14 @@ function logoChange() {
 
 //partnersInfo
 
-let partnerLogos = document.querySelectorAll(".logo_wrapper");
-let partnerCard = document.querySelector(".partner_card");
-let partnerCardWrapper = document.querySelector(".partner_card_wrapper");
-let HTML = document.querySelector("html");
-let partnerCardCloseButton = document.querySelector("html body div.partner_card_wrapper div.partner_card svg.icon-cancel");
 
-console.log(partnerCardCloseButton);
-
-partnerCard.onclick = function(event) {
-    event.stopPropagation();
-}
-
-partnerLogos.forEach((item) => {
+let partnerLinks = document.querySelectorAll(".reason .logo_wrapper a");
+partnerLinks.forEach((item) => {
     item.addEventListener("click", openPartnerInfo);
 });
 
-partnerCardWrapper.addEventListener("click", closePartnerInfoCard);
-
-
-
-
 function openPartnerInfo(e) {
-    partnerCard.innerHTML = this.innerHTML+this.parentElement.lastElementChild.innerHTML+'<svg class="icon-cancel"><use xlink:href="symbol-defs.svg#icon-cancel"></use></svg>';
-    partnerCardCloseButtonUpdate();
-
-    if (this.classList.contains("expanded")) partnerCard.firstElementChild.classList.add("expanded");
-    else partnerCard.firstElementChild.classList.remove("expanded");
-
-    if (this.classList.contains("changeable")) partnerCard.firstElementChild.classList.add("changeable");
-    else partnerCard.firstElementChild.classList.remove("changeable");
-
-    partnerCard.parentElement.classList.add("active");
-    scrollBan();
-
     if(partnerInfoOpened==false) document.querySelector(".logo_wrapper.animated").classList.remove("animated");
-}
-
-function closePartnerInfoCard() {
-    console.log(1);
-    partnerCardWrapper.classList.remove("active");
-    scrollAllow();
-}
-
-function partnerCardCloseButtonUpdate() {
-    partnerCardCloseButton = document.querySelector("html body div.partner_card_wrapper div.partner_card svg.icon-cancel");
-    partnerCardCloseButton.addEventListener("click", closePartnerInfoCard);
-}
-
-function partnerInfoImgUpdate() {
-    partnerInfoImg = document.querySelector(".partner_card img");
 }
 
 function scrollBan() {
