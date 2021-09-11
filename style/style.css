@@ -149,6 +149,7 @@ div.try_for_free_btn a {
 }
 body {
   position: relative;
+  overflow-x: hidden;
 }
 .dark_theme_button {
   z-index: 100;
@@ -175,7 +176,7 @@ body {
 }
 nav.mobile {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -220,7 +221,7 @@ svg.icon-cancel.men {
   z-index: -1;
   position: fixed;
   top: 1150px;
-  right: 15vw;
+  right: 10vw;
   width: 20px;
   height: 20px;
   fill: white;
@@ -497,14 +498,13 @@ header .wrapper .mobile_menu {
 }
 @media screen and (max-width: 1100px) {
   header .wrapper .mobile_menu.active {
-    position: absolute;
-    top: -50vh;
-    right: -50vw;
+    position: fixed;
+    top: 0;
+    right: 0;
     z-index: 2;
     background: #09142e;
-    width: 160vw;
-    height: 220vh;
-    border-radius: 50%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
   }

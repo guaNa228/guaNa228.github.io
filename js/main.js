@@ -6,7 +6,8 @@ let counterDone = false;
 
 let partnerInfoOpened = false;
 
-let HTML = document.querySelector("html");
+let globalX = 0;
+let globalY = 0;
 
 //clients review slider
 
@@ -56,6 +57,9 @@ let mobileMenuLinks = document.querySelectorAll("nav.mobile a");
 
 
 mobileMenuOpenButton.onclick = function() {
+
+    document.querySelector("html").style.scrollBehavior = "auto";
+
     document.querySelector("body").style.overflowY = "hidden";
     mobileMenu.style.display = "flex";
     setTimeout(() => {
@@ -76,25 +80,30 @@ mobileMenuOpenButton.onclick = function() {
 }
 
 closeMenuBtn.onclick = function() {
+    window.scrollTo(0, 0);
+    document.querySelector("html").style.scrollBehavior = "smooth";
     mobileMenu.classList.remove("active");
     mobileNav.classList.remove("active");
     closeMenuBtn.classList.remove("active");
-    document.querySelector("body").style.overflowY = "scroll";
+    document.querySelector("body").style.overflowY = "hidden";
     scrollAllow();
     setTimeout(() => {
         mobileMenu.style.display = "none";
     }, 500);
+
+    
 }
 
 mobileMenuLinks.forEach((item) => {
     item.onclick = function() {
+        document.querySelector("html").style.scrollBehavior = "smooth";
         setTimeout(() => {
             scrollAllow();
             mobileMenu.classList.remove("active");
             mobileMenu.style.position = "absolute";
             mobileNav.classList.remove("active");
             closeMenuBtn.classList.remove("active");
-            document.querySelector("html").style.overflowY = "scroll";
+            document.querySelector("body").style.overflowY = "hidden";
             setTimeout(() => {
                 mobileMenu.style.display = "none";
                 mobileMenu.style.position = "";
@@ -240,6 +249,7 @@ function scrollBan() {
     window.onwheel = preventDefault; // modern standard
     window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
     window.ontouchmove  = preventDefault; // mobile
+    window.ontouchstart = preventDefault;
     window.addEventListener('DOMMouseScroll', preventDefault, false);
 }
 
@@ -249,6 +259,7 @@ function scrollAllow() {
     document.removeEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
     window.onwheel = null; // modern standard
     window.onmousewheel = document.onmousewheel = null; // older browsers, IE
+    window.ontouchstart = null;
     window.ontouchmove  = null; // mobile
     window.addEventListener('DOMMouseScroll', null, false);
 }
