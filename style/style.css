@@ -401,6 +401,7 @@ header.dark .wrapper #main #content h1 {
 header.dark .wrapper #main #content h1::selection {
   background: #f55303;
   color: black;
+  font-size: 50px;
 }
 header.dark .wrapper #main #content p {
   color: #9e9c97;
@@ -416,11 +417,11 @@ header.dark .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #e5ff52;
 }
 header .wrapper {
-  max-width: 77%;
+  max-width: 90%;
   box-sizing: padding-box;
   position: relative;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 50px;
   background-color: #fdfdfe;
 }
 header .wrapper #topPanel {
@@ -446,7 +447,7 @@ header .wrapper #topPanel svg.icon-menu {
 }
 header .wrapper #topPanel nav {
   display: flex;
-  flex-basis: 530px;
+  flex-basis: 690px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -458,6 +459,7 @@ header .wrapper #topPanel nav a {
   text-decoration: none;
   color: #242f51;
   transition: color 0.3s;
+  font-size: 22px;
 }
 header .wrapper #topPanel nav a:hover {
   color: blue;
@@ -467,8 +469,8 @@ header .wrapper #topPanel nav a.try_for_free_btn {
   display: block;
   cursor: pointer;
   font-family: Poppins-Bold;
-  padding: 20px 40px;
-  font-size: 16px;
+  padding: 30px 60px;
+  font-size: 26px;
   color: white;
   background: #2500f9;
   border-radius: 40px;
@@ -489,6 +491,7 @@ header .wrapper #topPanel nav a.try_for_free_btn:hover {
     width: 50px;
     height: 50px;
     fill: #242f51;
+    margin-right: 10px;
   }
 }
 header .wrapper .mobile_menu {
@@ -599,10 +602,16 @@ header .wrapper #main #content .editors_choice p {
 }
 header .wrapper #main #content h1 {
   line-height: 80px;
-  font-size: 70px;
+  font-size: 50px;
   font-family: Poppins-SemiBold;
   color: #242f51;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 530px) {
+  header .wrapper #main #content h1 {
+    font-size: 35px;
+    line-height: 60px;
+  }
 }
 header .wrapper #main #content p {
   line-height: 30px;
@@ -640,8 +649,8 @@ header .wrapper #main #content .btns a.try_for_free_btn {
   display: flex;
   cursor: pointer;
   font-family: Poppins-Bold;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 20px 35px;
+  font-size: 30px;
   color: white;
   background: #2500f9;
   border-radius: 40px;
@@ -653,9 +662,15 @@ header .wrapper #main #content .btns a.try_for_free_btn {
 header .wrapper #main #content .btns a.try_for_free_btn:hover {
   background: #1a00ad;
 }
+@media screen and (max-width: 530px) {
+  header .wrapper #main #content .btns a.try_for_free_btn {
+    padding: 15px 25px;
+    font-size: 22px;
+  }
+}
 header .wrapper #main #content .btns a.try_for_free_btn svg {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   fill: white;
 }
@@ -750,7 +765,7 @@ section#why_chess .wrapper .head p em {
   color: #242f51;
 }
 article#features_and_companies {
-  margin-top: 70px;
+  margin-top: 120px;
   background-color: #ffffff;
   border-bottom: 2px solid #f4f4f4;
 }
@@ -905,12 +920,13 @@ article#features_and_companies section#features .wrapper .info .features_contain
   color: #616368;
 }
 article#features_and_companies section#jackpots {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1100px) {
   article#features_and_companies section#jackpots {
     padding: 0px 5px;
+    margin-top: 0px;
   }
 }
 article#features_and_companies section#jackpots .wrapper {
@@ -992,7 +1008,7 @@ article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot
 }
 @media screen and (max-width: 895px) {
   article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot {
-    margin-top: 30px;
+    margin-top: 70px;
   }
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot h4 {
@@ -1019,7 +1035,12 @@ article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  font-family: Poppins;
+  font-family: Poppins-Bold;
+}
+article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot h4 {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 32px;
 }
 article#features_and_companies section#jackpots .wrapper .jackpot_items .jackpot:nth-child(1) h4 {
   color: #f55767;
@@ -1086,19 +1107,19 @@ article#features_and_companies section#designed_and_built .wrapper .info {
 }
 article#features_and_companies section#designed_and_built .wrapper .info h2 {
   font-family: Poppins-SemiBold;
-  font-size: 36px;
+  font-size: 46px;
   color: #242f51;
   margin: 0 0 30px 0;
   padding: 0;
-  line-height: 46px;
+  line-height: 56px;
 }
 article#features_and_companies section#designed_and_built .wrapper .info p {
   color: #616368;
-  font-size: 16px;
+  font-size: 22px;
   font-family: Poppins;
   padding: 0;
   margin: 0;
-  line-height: 26px;
+  line-height: 36px;
 }
 article#features_and_companies section#designed_and_built .wrapper .info a.try_for_free_btn {
   transition: 0.5s;
@@ -1146,13 +1167,13 @@ article#reasons_and_prices section#why_choose_app .wrapper h1 {
   font-size: 36px;
   line-height: 46px;
   color: #242f51;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 article#reasons_and_prices section#why_choose_app .wrapper h5 {
   text-align: center;
   max-width: 100%;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 26px;
   color: #616368;
   margin-bottom: 85px;
@@ -1297,13 +1318,13 @@ article#reasons_and_prices section#timy .wrapper h1 {
   font-size: 36px;
   line-height: 46px;
   color: #242f51;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 article#reasons_and_prices section#timy .wrapper h5 {
   text-align: center;
   max-width: 100%;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 26px;
   color: #616368;
 }
@@ -1666,26 +1687,26 @@ footer h1 span {
 }
 footer nav {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 footer nav a {
-  flex-basis: 150px;
+  flex-basis: 190px;
   height: 40px;
   line-height: 40px;
   transition: 0.5s;
   display: inline-block;
   color: white;
-  font-size: 16px;
+  font-size: 22px;
   font-family: Poppins;
   text-decoration: none;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 530px) {
   footer nav a {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 5px;
   }
 }

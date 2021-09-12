@@ -117,8 +117,8 @@ let globalIntervals = [];
 let tempInterval;
 let countingBlocks = Array.from(document.querySelectorAll(".jackpot_items .jackpot .logo"));
 
-const INCREMENTS = [1, 1, 267];
-const INTERVALS = [150, 100, 25];
+const INCREMENTS = [1, 63, 31];
+const INTERVALS = [600, 100, 50];
 
 function startCountingAnimation(animatedBlock, index) {
     let animationValue = animatedBlock.dataset.value;
@@ -129,7 +129,7 @@ function startCountingAnimation(animatedBlock, index) {
 
 function increaseCounter(block, maxValue, increment) {
     block.textContent = parseInt(block.textContent) + increment;
-    if (parseInt(block.textContent)+increment>=maxValue) {
+    if (parseInt(block.textContent)+increment>maxValue) {
         block.textContent = maxValue;
         clearInterval(countingBlocks.findIndex((item) => {
             return item.dataset.value==maxValue;

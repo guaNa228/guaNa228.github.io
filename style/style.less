@@ -438,6 +438,7 @@ header {
                         &::selection {
                             background: #f55303;
                             color: black;
+                            font-size: 50px;
                         }
                     }
                     p {
@@ -462,11 +463,11 @@ header {
         }
     }
     .wrapper {
-        max-width: 77%;
+        max-width: 90%;
         box-sizing: padding-box;
         position: relative;
         margin: 0 auto;
-        padding-top: 10px;
+        padding-top: 50px;
         background-color: #fdfdfe;
         #topPanel {
             display: flex;
@@ -490,7 +491,7 @@ header {
             }
             nav {
                 display: flex;
-                flex-basis: 530px;
+                flex-basis: 690px;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
@@ -501,6 +502,7 @@ header {
                     text-decoration: none;
                     color: @DarkBlue;
                     transition: color .3s;
+                    font-size: 22px;
                     &:hover {
                         color: blue;
                     }
@@ -510,8 +512,8 @@ header {
                     display: block;
                     cursor: pointer;
                     font-family: Poppins-Bold;
-                    padding: 20px 40px;
-                    font-size: 16px;
+                    padding: 30px 60px;
+                    font-size: 26px;
                     color: white;
                     background: @Blue;
                     border-radius: 40px;
@@ -535,6 +537,7 @@ header {
                     width: 50px;
                     height: 50px;
                     fill: @DarkBlue;
+                    margin-right: 10px;
                 }
             }
         }
@@ -640,10 +643,14 @@ header {
                 }
                 h1 {
                     line-height: 80px;
-                    font-size: 70px;
+                    font-size: 50px;
                     font-family: Poppins-SemiBold;
                     color: @DarkBlue;
                     margin-bottom: 40px;
+                    @media screen and (max-width: 530px) {
+                        font-size: 35px;
+                        line-height: 60px;
+                    }
                 }
                 p {
                     line-height: 30px;
@@ -678,8 +685,8 @@ header {
                         display: flex;
                         cursor: pointer;
                         font-family: Poppins-Bold;
-                        padding: 10px 15px;
-                        font-size: 16px;
+                        padding: 20px 35px;
+                        font-size: 30px;
                         color: white;
                         background: @Blue;
                         border-radius: 40px;
@@ -690,10 +697,13 @@ header {
                         &:hover {
                             background: darken(@Blue, 15%);
                         }
-                        
+                        @media screen and (max-width: 530px) {
+                            padding: 15px 25px;
+                            font-size: 22px;
+                        }
                         svg {
-                            width: 30px;
-                            height: 30px;
+                            width: 40px;
+                            height: 40px;
                             margin-right: 10px;
                             fill: white;
                         }
@@ -789,7 +799,7 @@ section#why_chess {
 }
 
 article#features_and_companies {
-    margin-top: 70px;
+    margin-top: 120px;
     background-color: #ffffff;
     border-bottom: 2px solid #f4f4f4;
     section#trusted {
@@ -956,10 +966,11 @@ article#features_and_companies {
     
 
     section#jackpots {
-        margin-top: 50px;
+        margin-top: 60px;
         margin-bottom: 50px;
         @media screen and (max-width: 1100px) {
             padding: 0px 5px;
+            margin-top: 0px;
         }
         .wrapper {
             max-width: 1075px;
@@ -1026,7 +1037,7 @@ article#features_and_companies {
                 .jackpot {
                     flex-basis: 290px;
                     @media screen and (max-width: 895px) {
-                        margin-top: 30px;
+                        margin-top: 70px;
                     }
                     h4 {
                         margin: 0;
@@ -1052,7 +1063,12 @@ article#features_and_companies {
                         align-items: center;
                         justify-content: center;
                         font-size: 24px;
-                        font-family: Poppins;
+                        font-family: Poppins-Bold;
+                    }
+                    h4 {
+                        margin-top: 20px;
+                        font-size: 24px;
+                        line-height: 32px;
                     }
                     &:nth-child(1) {
                         h4 {
@@ -1120,19 +1136,19 @@ article#features_and_companies {
                 }
                 h2 {
                     font-family: Poppins-SemiBold;
-                    font-size: 36px;
+                    font-size: 46px;
                     color: @DarkBlue;
                     margin: 0 0 30px 0;
                     padding: 0;
-                    line-height: 46px;
+                    line-height: 56px;
                 }
                 p {
                     color: @Gray;
-                    font-size: 16px;
+                    font-size: 22px;
                     font-family: Poppins;
                     padding: 0;
                     margin: 0;
-                    line-height: 26px;
+                    line-height: 36px;
                 }
                 a.try_for_free_btn {
                     transition: .5s;
@@ -1180,13 +1196,13 @@ article#reasons_and_prices {
                 font-size: 36px;
                 line-height: 46px;
                 color: @DarkBlue;
-                margin-bottom: 45px;
+                margin-bottom: 25px;
             }
             h5 {
                 text-align: center;
                 max-width: 100%;
                 font-family: Poppins;
-                font-size: 16px;
+                font-size: 22px;
                 line-height: 26px;
                 color: @Gray;
                 margin-bottom: 85px;
@@ -1325,13 +1341,13 @@ article#reasons_and_prices {
                 font-size: 36px;
                 line-height: 46px;
                 color: @DarkBlue;
-                margin-bottom: 45px;
+                margin-bottom: 25px;
             }
             h5 {
                 text-align: center;
                 max-width: 100%;
                 font-family: Poppins;
-                font-size: 16px;
+                font-size: 22px;
                 line-height: 26px;
                 color: @Gray;
             }
@@ -1698,23 +1714,23 @@ footer {
     }
     nav {
         margin: 0 auto;
-        max-width: 500px;
+        max-width: 600px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
         a {
-            flex-basis: 150px;
+            flex-basis: 190px;
             height: 40px;
             line-height: 40px;
             transition: .5s;
             display: inline-block;
             color: white;
-            font-size: 16px;
+            font-size: 22px;
             font-family: Poppins;
             text-decoration: none;
-            @media screen and (max-width: 430px) {
-                font-size: 14px;
+            @media screen and (max-width: 530px) {
+                font-size: 16px;
                 margin: 0 5px;
             }
             &:hover {
