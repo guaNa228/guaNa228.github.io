@@ -385,6 +385,7 @@ header {
   margin: 0;
   background-color: #fdfdfe;
   position: relative;
+  padding-bottom: 90px;
 }
 header.dark {
   background: #000;
