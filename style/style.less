@@ -1759,17 +1759,25 @@ footer {
         }
     }
     nav.social {
-        margin-top: 30px;
-        max-width: 170px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        max-width: 220px;
         justify-content: space-around;
+        align-items: center;
         a {
+            flex-basis: 25%;
             line-height: 30px;
-            height: 30px;
+            height: 40px;
             &:hover {
                 transform: none;
                 svg {
                     height: 45px;
                     width: 45px;
+                    @media screen and (max-width: 530px) {
+                        height: 35px;
+                        width: 35px;
+                    }
                 }
             }
             svg {
@@ -1777,15 +1785,39 @@ footer {
                 fill: white;
                 height: 40px;
                 width: 40px;
+                @media screen and (max-width: 530px) {
+                    height: 30px;
+                    width: 30px;
+                }
             }
         }
     }
     p {
-        opacity: 0.21;
+        margin-top: 50px;
         color: white;
         font-family: Poppins;
-        font-size: 14px;
-
+        font-size: 18px;
+        line-height: 30px;
+        a {
+            color: @Blue;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "";
+                transition: .5s;
+                height: 2px;
+                position: absolute;
+                bottom: -5px;
+                left: -1000%;
+                width: 100%;
+                overflow: hidden;
+                background: @Blue;
+            }
+            &:hover::before {
+                left: 0;
+            }
+        }
     }
 }
 

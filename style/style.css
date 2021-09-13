@@ -1735,13 +1735,17 @@ footer nav a:hover {
   color: #f55303;
 }
 footer nav.social {
-  margin-top: 30px;
-  max-width: 170px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  max-width: 220px;
   justify-content: space-around;
+  align-items: center;
 }
 footer nav.social a {
+  flex-basis: 25%;
   line-height: 30px;
-  height: 30px;
+  height: 40px;
 }
 footer nav.social a:hover {
   transform: none;
@@ -1750,17 +1754,50 @@ footer nav.social a:hover svg {
   height: 45px;
   width: 45px;
 }
+@media screen and (max-width: 530px) {
+  footer nav.social a:hover svg {
+    height: 35px;
+    width: 35px;
+  }
+}
 footer nav.social a svg {
   transition: 0.5s;
   fill: white;
   height: 40px;
   width: 40px;
 }
+@media screen and (max-width: 530px) {
+  footer nav.social a svg {
+    height: 30px;
+    width: 30px;
+  }
+}
 footer p {
-  opacity: 0.21;
+  margin-top: 50px;
   color: white;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 30px;
+}
+footer p a {
+  color: #2500f9;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+footer p a::before {
+  content: "";
+  transition: 0.5s;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: -1000%;
+  width: 100%;
+  overflow: hidden;
+  background: #2500f9;
+}
+footer p a:hover::before {
+  left: 0;
 }
 html body.darkmode--activated footer nav a:hover {
   color: #f55303;
