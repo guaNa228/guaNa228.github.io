@@ -1726,14 +1726,14 @@ footer nav.social a:hover {
   transform: none;
 }
 footer nav.social a:hover svg {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
 }
 footer nav.social a svg {
   transition: 0.5s;
   fill: white;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
 }
 footer p {
   opacity: 0.21;
