@@ -702,6 +702,11 @@ header .bg img {
 header .bg img:not(:first-child) {
   margin-left: -10px;
 }
+@media screen and (max-width: 800px) {
+  header .bg {
+    display: none;
+  }
+}
 header .bg_extended {
   pointer-events: none;
   min-width: 100%;
