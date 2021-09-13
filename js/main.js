@@ -6,8 +6,6 @@ let counterDone = false;
 
 let partnerInfoOpened = false;
 
-let globalX = 0;
-let globalY = 0;
 
 //clients review slider
 
@@ -118,22 +116,26 @@ let tempInterval;
 let countingBlocks = Array.from(document.querySelectorAll(".jackpot_items .jackpot .logo"));
 
 const INCREMENTS = [1, 79, 31];
-const INTERVALS = [150, 75, 50];
+const INTERVALS = [350, 80, 70];
 
 function startCountingAnimation(animatedBlock, index) {
     let animationValue = animatedBlock.dataset.value;
     tempInterval = setInterval(increaseCounter, INTERVALS[index], animatedBlock, animationValue, INCREMENTS[index]);
     tempInterval.maximum = animationValue;
     globalIntervals.push(tempInterval);
+    setTimeout(clearAllIntervals, 3000);
 }
 
 function increaseCounter(block, maxValue, increment) {
     block.textContent = parseInt(block.textContent) + increment;
     if (parseInt(block.textContent)+increment>maxValue) {
         block.textContent = maxValue;
-        clearInterval(countingBlocks.findIndex((item) => {
-            return item.dataset.value==maxValue;
-        })+2);
+    }
+}
+
+function clearAllIntervals() {
+    for (let i = 10; i>0; i--) {
+        clearInterval(i);
     }
 }
 
@@ -196,7 +198,6 @@ function darkThemeButtonChange() {
 }
 
 function logoChange() {
-    console.log(logo);
     if (header.classList.contains("dark")) logo.src = logo.src.replace("/dark/logo.svg", "logo.svg", 1);
     else logo.src = logo.src.replace("logo.svg", "/dark/logo.svg", 1);
 }
@@ -235,7 +236,6 @@ function scrollAllow() {
 }
 
 function preventDefault(e) {
-    console.log(1);
     e = e || window.event;
     if (e.preventDefault)
         e.preventDefault();
