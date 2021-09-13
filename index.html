@@ -16,11 +16,7 @@
 </head>
 <body>
 
-    <div class="dark_theme_button">
-        <svg class="icon-moon" >
-            <use xlink:href="symbol-defs.svg#icon-moon"></use>
-        </svg>
-    </div>
+    
     <nav class="mobile">
         <a href="#features_and_companies" class="nav_link">О нас</a>
         <a href="#reasons_and_prices" class="nav_link">Парнеры</a>
@@ -48,7 +44,7 @@
             </div>
             <div id="main">
                 <div id="content">
-                    <h1>Играй в шахматы и зарабатывай криптовалюту!</h1>
+                    <h1>Тестирование!</h1>
                     <div class="btns">
                         <a href="https://t.me/cryptochessgame" class="try_for_free_btn"><svg class="icon-telegram" >
                             <use xlink:href="symbol-defs.svg#icon-telegram"></use>
@@ -239,5 +235,13 @@
 
 <script src="js/dark-min.js"></script>
 <script src="js/main.js"></script>
+<script>
+    
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+
+</script>
 </body>
 </html>
