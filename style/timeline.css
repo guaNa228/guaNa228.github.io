@@ -235,8 +235,8 @@ body.darkmode--activated div.temiline li.event span::selection {
 .timeline .event span {
   font-family: Poppins;
   display: block;
-  margin-top: 20px;
-  font-size: 1.2rem;
+  margin-top: 40px;
+  font-size: 1.5rem;
 }
 .timeline .event:last-of-type {
   padding-bottom: 0;
@@ -255,9 +255,10 @@ body.darkmode--activated div.temiline li.event span::selection {
   content: attr(data-date);
   text-align: right;
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   min-width: 120px;
   font-family: 'Saira', sans-serif;
+  font-weight: 700;
 }
 @media screen and (max-width: 890px) {
   .timeline .event:before {

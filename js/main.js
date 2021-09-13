@@ -117,8 +117,8 @@ let globalIntervals = [];
 let tempInterval;
 let countingBlocks = Array.from(document.querySelectorAll(".jackpot_items .jackpot .logo"));
 
-const INCREMENTS = [1, 63, 31];
-const INTERVALS = [600, 100, 50];
+const INCREMENTS = [1, 79, 31];
+const INTERVALS = [150, 75, 50];
 
 function startCountingAnimation(animatedBlock, index) {
     let animationValue = animatedBlock.dataset.value;
