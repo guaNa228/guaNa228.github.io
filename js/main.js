@@ -2,10 +2,32 @@
 
 let clicksDone = false;
 
-let counterDone = false;
+//price mode swap
 
-let partnerInfoOpened = false;
+let modeSwapMenu = document.querySelector("div.mode_swap");
+let priceTypes = document.querySelectorAll("div.mode_swap span");
+let animationBg = document.querySelector("span.blue_back");
+let priceCards = document.querySelectorAll("div.price_card")
 
+modeSwapMenu.addEventListener("click", function(event) {
+    if (priceTypes[0].classList.contains("active")) {
+        priceTypes[0].classList.remove("active");
+        priceTypes[1].classList.add("active");
+        animationBg.style.left = "140px";
+        priceCards.forEach(function(el) {
+            if (el.classList.contains("monthly")) el.style.display = "none";
+            else el.style.display = "block";
+        });
+    } else {
+        priceTypes[1].classList.remove("active");
+        priceTypes[0].classList.add("active");
+        animationBg.style.left = "0";
+        priceCards.forEach(function(el) {
+            if (el.classList.contains("annually")) el.style.display = "none";
+            else el.style.display = "block";
+        });
+    }
+});
 
 //clients review slider
 
@@ -42,6 +64,72 @@ sliderNextBtn.forEach(function(item) {
 sliderPrevBtn.forEach(function(item) {
     item.addEventListener("click", prevSlide);
 });
+
+//client review slider auto rotating
+
+function prevSlideAuto() {
+    if (clicksDone==false) {
+        sliderItems.forEach(function(item) {
+            percentage = parseInt(parseInt(window.getComputedStyle(item, null).getPropertyValue("left"))/parseInt(window.getComputedStyle(item, null).getPropertyValue("width")))*100;
+            item.style.left = (percentage+100)+"%";
+            item.style.visibility = (item.style.left=="0%") ? "visible" : "hidden";
+        });
+    }
+}
+
+function nextSlideAuto() {
+    if (clicksDone==false) {
+        sliderItems.forEach(function(item) {
+            percentage = parseInt(parseInt(window.getComputedStyle(item, null).getPropertyValue("left"))/parseInt(window.getComputedStyle(item, null).getPropertyValue("width")))*100;
+            item.style.left = (percentage-100)+"%";
+            item.style.visibility = (item.style.left=="0%") ? "visible" : "hidden";
+        });
+    }
+}
+
+function autoSlide() {
+        if (window.getComputedStyle(sliderItems[0], null).getPropertyValue("left")=="0px") {
+            for (let i = 0; i<3; i++) {
+                setTimeout(function() {
+                    nextSlideAuto();
+                }, 10000*i);
+            }
+        }
+        if (window.getComputedStyle(sliderItems[3], null).getPropertyValue("left")=="0px") {
+            console.log(2);
+            for (let i = 0; i<3; i++) {
+                setTimeout(function() {
+                    prevSlideAuto();
+                }, 10000*i);
+            }
+        }
+}
+
+autoSlide();
+
+setInterval(autoSlide, 30000);
+
+//accordion
+
+accordionOpenBtns = document.querySelectorAll("svg.icon-plus");
+
+accordionOpenBtns.forEach(function(item) {
+    item.addEventListener("click", openAccordion);
+});
+
+function openAccordion() {
+    console.log(this.parentElement.children[1]);
+    this.style.display = "none";
+    this.parentElement.children[1].style.display = "block";
+    setTimeout(() => {
+        this.parentElement.classList.add("opened");
+        this.parentElement.children[1].style.marginTop = '40px';
+    }, 4);
+    setTimeout(()=> {
+        this.parentElement.classList.add("animated");
+    }, 100);
+}
+
 //mobile menu animation
 
 let mobileMenuOpenButton = document.querySelector(".icon-menu");
@@ -49,59 +137,48 @@ let mobileMenu = document.querySelector(".mobile_menu");
 let mobileNav = document.querySelector("nav.mobile");
 let animBlock = document.querySelector(".animBlock");
 let animBlockWrapper = document.querySelector(".animBlockWrapper");
-let closeMenuBtn = document.querySelector("svg.icon-cancel.men");
+let closeMenuBtn = document.querySelector("svg.icon-cancel");
 
 let mobileMenuLinks = document.querySelectorAll("nav.mobile a");
 
 
 mobileMenuOpenButton.onclick = function() {
-
-    document.querySelector("html").style.scrollBehavior = "auto";
-
-    document.querySelector("body").style.overflowY = "hidden";
     mobileMenu.style.display = "flex";
     setTimeout(() => {
         mobileMenu.classList.add("active");
-        scrollBan();
+        document.querySelector("html").style.overflowY = "hidden";
     }, 10);
     
     setTimeout(() => {
         animBlockWrapper.style.display = "block";
-        animBlock.style.animation = "whiteBlock .3s cubic-bezier(.23,.45,.38,.84)";
+        animBlock.style.animation = "whiteBlock .7s cubic-bezier(.23,.45,.38,.84)";
         setTimeout(() => {
             animBlockWrapper.style.display = "none";
             animBlock.style.animation = "";
             mobileNav.classList.add("active");
             closeMenuBtn.classList.add("active");
-        }, 300);
-    }, 600);
+        }, 700);
+    }, 1100);
 }
 
 closeMenuBtn.onclick = function() {
-    window.scrollTo(0, 0);
-    document.querySelector("html").style.scrollBehavior = "smooth";
     mobileMenu.classList.remove("active");
     mobileNav.classList.remove("active");
     closeMenuBtn.classList.remove("active");
-    document.querySelector("body").style.overflowY = "hidden";
-    scrollAllow();
+    document.querySelector("html").style.overflowY = "scroll";
     setTimeout(() => {
         mobileMenu.style.display = "none";
-    }, 500);
-
-    
+    }, 1000);
 }
 
 mobileMenuLinks.forEach((item) => {
     item.onclick = function() {
-        document.querySelector("html").style.scrollBehavior = "smooth";
         setTimeout(() => {
-            scrollAllow();
             mobileMenu.classList.remove("active");
             mobileMenu.style.position = "absolute";
             mobileNav.classList.remove("active");
             closeMenuBtn.classList.remove("active");
-            document.querySelector("body").style.overflowY = "hidden";
+            document.querySelector("html").style.overflowY = "scroll";
             setTimeout(() => {
                 mobileMenu.style.display = "none";
                 mobileMenu.style.position = "";
@@ -110,156 +187,3 @@ mobileMenuLinks.forEach((item) => {
     }
 });
 
-//counter animation
-let globalIntervals = [];
-let tempInterval;
-let countingBlocks = Array.from(document.querySelectorAll(".jackpot_items .jackpot .logo"));
-
-const INCREMENTS = [1, 79, 31];
-const INTERVALS = [350, 80, 70];
-
-function startCountingAnimation(animatedBlock, index) {
-    let animationValue = animatedBlock.dataset.value;
-    tempInterval = setInterval(increaseCounter, INTERVALS[index], animatedBlock, animationValue, INCREMENTS[index]);
-    tempInterval.maximum = animationValue;
-    globalIntervals.push(tempInterval);
-    setTimeout(clearAllIntervals, 3000);
-}
-
-function increaseCounter(block, maxValue, increment) {
-    block.textContent = parseInt(block.textContent) + increment;
-    if (parseInt(block.textContent)+increment>maxValue) {
-        block.textContent = maxValue;
-    }
-}
-
-function clearAllIntervals() {
-    for (let i = 10; i>0; i--) {
-        clearInterval(i);
-    }
-}
-
-//counter start
-window.addEventListener("scroll", function() {
-    if (document.querySelector(".jackpot_items").getBoundingClientRect().top-window.innerHeight<=0 && !counterDone) {
-        counterDone = true;
-        countingBlocks.forEach((item, index) => {
-            startCountingAnimation(item, index);
-        });
-    }
-});
-
-//dark mode
-
-let darkThemeButton = document.querySelector(".dark_theme_button");
-let header = document.querySelector("header");
-const darkmode =  new Darkmode();
-let extenededBg = document.querySelector(".bg_extended img");
-let logo = document.querySelector("#topPanel span.logo img");
-let partnerInfoImg = document.querySelector(".partner_card img");
-
-document.addEventListener("DOMContentLoaded", function() {
-    if (document.querySelector('body').classList.contains("darkmode--activated")) darkModeToggle();
-    window.scrollBy(0, 1);
-});
-
-darkThemeButton.addEventListener("click", function() {
-    darkModeToggle();
-    darkmode.toggle();
-});
-
-function darkModeToggle() {
-    changeHeaderBackgrounds();
-    darkThemeButtonChange();
-    logoChange();
-    changePartnersLogos();
-    
-    header.classList.toggle("dark");
-}
-
-function changePartnersLogos() {
-    Array.from(document.querySelectorAll(".logo_wrapper.changeable img")).forEach(function(item) {
-        if (header.classList.contains("dark")) item.src = item.src.replace("/svg_dark", "/svg", 1);
-        else item.src = item.src.replace("/svg", "/svg_dark", 1);
-    });
-}
-
-function changeHeaderBackgrounds() {
-    Array.from(document.querySelectorAll(".bg img")).forEach(function(item) {
-        if (header.classList.contains("dark")) item.src = item.src.replace("/dark/Layer5.svg", "/Layer5.svg", 1);
-        else item.src = item.src.replace("/Layer5.svg", "/dark/Layer5.svg", 1);
-    });
-}
-
-function darkThemeButtonChange() {
-    darkThemeButton.classList.toggle("light");
-    if (header.classList.contains("dark")) darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-moon");
-    else darkThemeButton.firstElementChild.firstElementChild.setAttribute("xlink:href", "symbol-defs.svg#icon-sun");
-}
-
-function logoChange() {
-    if (header.classList.contains("dark")) logo.src = logo.src.replace("/dark/logo.svg", "logo.svg", 1);
-    else logo.src = logo.src.replace("logo.svg", "/dark/logo.svg", 1);
-}
-
-
-//partnersInfo
-
-
-let partnerLinks = document.querySelectorAll(".reason .logo_wrapper a");
-partnerLinks.forEach((item) => {
-    item.addEventListener("click", openPartnerInfo);
-});
-
-function openPartnerInfo(e) {
-    if(partnerInfoOpened==false) document.querySelector(".logo_wrapper.animated").classList.remove("animated");
-}
-
-function scrollBan() {
-    if (window.addEventListener) // older FF
-    window.addEventListener('DOMMouseScroll', preventDefault, false);
-    document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-    window.onwheel = preventDefault; // modern standard
-    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-    window.ontouchmove  = preventDefault; // mobile
-    window.addEventListener('DOMMouseScroll', preventDefault, false);
-}
-
-function scrollAllow() {
-    if (window.addEventListener) // older FF
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    document.removeEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-    window.onwheel = null; // modern standard
-    window.onmousewheel = document.onmousewheel = null; // older browsers, IE
-    window.ontouchmove  = null; // mobile
-    window.addEventListener('DOMMouseScroll', null, false);
-}
-
-function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;  
-  }
-
-function scrollBan() {
-    if (window.addEventListener) // older FF
-    window.addEventListener('DOMMouseScroll', preventDefault, false);
-    document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-    window.onwheel = preventDefault; // modern standard
-    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-    window.ontouchmove  = preventDefault; // mobile
-    window.ontouchstart = preventDefault;
-    window.addEventListener('DOMMouseScroll', preventDefault, false);
-}
-
-function scrollAllow() {
-    if (window.addEventListener) // older FF
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    document.removeEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-    window.onwheel = null; // modern standard
-    window.onmousewheel = document.onmousewheel = null; // older browsers, IE
-    window.ontouchstart = null;
-    window.ontouchmove  = null; // mobile
-    window.addEventListener('DOMMouseScroll', null, false);
-}
