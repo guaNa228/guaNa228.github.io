@@ -1,0 +1,10 @@
+export const langData = ["Online chess prize tournaments", "About", "Partners", "Our future", "About", "Partners", "Our future", 
+"Online chess tournaments with cryptocurrency prizes", "Telegram", 
+"Play chess and earn crypto!", 
+"Every week we hold several chess tournaments without entry fees, in which our users can earn cryptocurrency by taking top places", 
+"Tournaments every week", "Dollars raffled", "Active players", "Partners", "There are no buy-in fees in our tournaments. <br> Prize funds are filled up with sponsors resources.",
+"Our future", "Website launching", "Youtube channel", 
+"Social networks start", "3000-5000 users", "Engaging foreign audience ", "Adding more games", 
+"DEvelopment of our own gaming platform", "Developing own token", "5000-10000 users", "Gaming platform launching", 
+"Launching a token, attached to our platform", " <span>Checkmate</span>  crypto chess", "Checkmate", "About", "Partners", "Our future", 
+"Contact us: <a type='email' href='mailto:checkmate.crypto.chess@gmail.com'>checkmate.crypto.chess@gmail.com</a>"];
